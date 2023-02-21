@@ -151,6 +151,34 @@ export default {
 }
 
 .section1 {
+	position: relative;
+
+	@include min-width(1025px) {
+    &::before{
+			content: "";
+			width: 147px;
+			height: 153px;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: url("@/assets/images/newpic/s2_bg_deco01.svg") no-repeat
+      center/contain;
+		}
+
+		&::after{
+			content: "";
+			width: 200px;
+			height: 200px;
+			display: block;
+			position: absolute;
+			top: 100px;
+			right: 0;
+			background: url("@/assets/images/newpic/s2_bg_deco02.svg") no-repeat
+      center/contain;
+		}
+  }
+
   @include min-width(1280px) {
     margin-top: 3rem;
   }

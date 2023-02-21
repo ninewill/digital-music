@@ -99,7 +99,7 @@ export default {};
     position: absolute;
     top: 0px;
     left: 0px;
-    background: url("@/assets/images/pic/pic_01_START.svg") no-repeat
+    background: url("@/assets/images/newpic/s2_START.svg") no-repeat
       center/contain;
     @include hidetext;
   }

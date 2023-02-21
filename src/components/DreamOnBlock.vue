@@ -7,7 +7,16 @@
       <FormSingle />
     </div>
     <a href="#4" class="btn-course">
-      <img src="@/assets/images/btn/btn_course_default.svg" alt="圖片" />
+      <img
+        class="btn-def"
+        src="@/assets/images/newbtn/s0_coures_default.png"
+        alt="圖片"
+      />
+      <img
+        class="btn-hover"
+        src="@/assets/images/newbtn/s0_coures_hover.png"
+        alt="圖片"
+      />
     </a>
   </div>
 </template>
@@ -48,7 +57,7 @@ export default {
     width: 301px;
     height: 44px;
     left: 50%;
-		top: -8%;
+    top: -8%;
     margin-left: -150.5px;
   }
 
@@ -93,11 +102,36 @@ export default {
   z-index: 999;
   cursor: pointer;
 
+  > img {
+    width: 100%;
+  }
+
   @include min-width(768px) {
     width: 121px;
     height: 139px;
     bottom: 100px;
     right: 100px;
+  }
+
+  @include min-width(1025px) {
+    .btn-def {
+    }
+
+    .btn-hover {
+			display: none;
+      opacity: 0;
+    }
+
+    &:hover {
+      .btn-def {
+				display: none;
+        opacity: 0;
+      }
+      .btn-hover {
+				display: block;
+        opacity: 1;
+      }
+    }
   }
 }
 </style>

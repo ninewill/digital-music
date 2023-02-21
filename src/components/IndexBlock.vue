@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="idx-banner-m"></div>
-    <div class="index-info">一起踏上，音樂製作養成之路！</div>
+    <div class="index-info">
+			<img src="@/assets/images/newpic/s1_logo.svg" alt="圖片" />
+		</div>
     <video class="" autoplay muted loop>
       <source src="@/assets/images/video/FINAL.mp4" type="video/mp4" />
     </video>
