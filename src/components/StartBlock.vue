@@ -4,14 +4,25 @@
       <h2 class="h2">START</h2>
     </div>
     <div class="s-content s1-content">
-      <div class="s1-content-title-1"></div>
-      <ul class="s1-item-1">
+      <div class="s1-content-title-1">
+        <div class="h3">
+          為影像賦能的幕後推手——音效設計師、音訊工程師、配音員
+        </div>
+        <span>完整系統化課程規劃，學習不再是當無頭蒼蠅</span>
+      </div>
+      <ul class="s1-item-wrap">
         <li>
           <div class="s1-img-1">
-            <img src="@/assets/images/pic/pic_01-1_photo.svg" alt="圖片" />
+            <img
+              src="@/assets/images/newpic/s2_learner01_default.png"
+              alt="圖片"
+            />
           </div>
           <div class="s1-img-2">
-            <img src="@/assets/images/pic/pic_01-1_title.svg" alt="圖片" />
+            <img
+              src="@/assets/images/newpic/s2_learner01_hover.png"
+              alt="圖片"
+            />
           </div>
           <p class="s1-info">
             零基礎至出片、有基礎至精進技法，用最短時間做出完美成品！
@@ -19,10 +30,16 @@
         </li>
         <li>
           <div class="s1-img-1">
-            <img src="@/assets/images/pic/pic_01-2_photo.svg" alt="圖片" />
+            <img
+              src="@/assets/images/newpic/s2_learner02_default.png"
+              alt="圖片"
+            />
           </div>
           <div class="s1-img-2">
-            <img src="@/assets/images/pic/pic_01-2_title.svg" alt="圖片" />
+            <img
+              src="@/assets/images/newpic/s2_learner02_hover.png"
+              alt="圖片"
+            />
           </div>
           <p class="s1-info">
             歌唱健檢、打穩基礎、提升技法，錄音室實戰，競賽彩排演出。
@@ -30,10 +47,16 @@
         </li>
         <li>
           <div class="s1-img-1">
-            <img src="@/assets/images/pic/pic_01-3_photo.svg" alt="圖片" />
+            <img
+              src="@/assets/images/newpic/s2_learner03_default.png"
+              alt="圖片"
+            />
           </div>
           <div class="s1-img-2">
-            <img src="@/assets/images/pic/pic_01-3_title.svg" alt="圖片" />
+            <img
+              src="@/assets/images/newpic/s2_learner03_hover.png"
+              alt="圖片"
+            />
           </div>
           <p class="s1-info">
             掌握比稿要領，知名講師引介管道，絕不讓自己吃虧，建立穩定收入。
@@ -88,8 +111,8 @@ export default {};
   }
 
   @include min-width(1920px) {
-    width: 379px;
-    height: 95px;
+    width: 310px;
+    height: 72px;
   }
 
   .h2 {
@@ -107,43 +130,93 @@ export default {};
 .s1-content {
   margin-top: 6rem;
   position: relative;
-  border-top: 1px dashed $color-primary-1;
-  border-right: 1px dashed $color-primary-1;
-  border-top-right-radius: 50px;
+  //border-top: 1px dashed $color-primary-1;
+  //border-right: 1px dashed $color-primary-1;
+  //border-top-right-radius: 50px;
 
-	@include min-width(768px) {
-		margin-top: 8rem;
-	}
+  @include min-width(768px) {
+    margin-top: 8rem;
+  }
 
   @include min-width(1280px) {
     margin-top: 6rem;
   }
 
   @include min-width(1440px) {
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
 }
 .s1-content-title-1 {
-  position: absolute;
-  top: 0;
-  margin-top: -19%;
-  width: 88%;
-  padding-bottom: 30.769%;
-  background: url("@/assets/images/pic/mobile/pic_01_title01.svg") no-repeat;
-  background-size: contain;
-  background-position: 0 100%;
+  text-align: center;
+
+  > .h3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 3rem;
+    display: inline-block;
+    border: 1px solid #ff8e30;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #ff8e30;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      margin-left: -131px;
+      width: 262px;
+      height: 48px;
+      background: url("@/assets/images/newpic/s2_title.png") no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+  }
+
+  > span {
+    margin-top: 1.5rem;
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    color: $color-white;
+
+    &::after {
+      content: "";
+      display: block;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      left: -110px;
+      width: 90px;
+      height: 16px;
+      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      right: -110px;
+      width: 90px;
+      height: 16px;
+      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      transform: scaleX(-1);
+    }
+  }
 
   @include min-width(768px) {
-    width: 50%;
-    margin-top: -23%;
   }
 
   @include min-width(1025px) {
-    width: 100%;
-    margin-top: -7%;
-    padding-bottom: 12.85%;
-    background: url("@/assets/images/pic/pic_01_title.svg") no-repeat;
-    background-size: contain;
   }
 }
 .s1-content-title-2 {
@@ -167,7 +240,7 @@ export default {};
     background-position: 0 100%;
   }
 }
-.s1-item-1 {
+.s1-item-wrap {
   margin-top: 6rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -207,31 +280,38 @@ export default {};
     @include min-width(1025px) {
       width: 32%;
       margin-bottom: 0;
+
+      &:hover {
+
+				.s1-img-1 {
+					opacity: 0;
+					display: none;
+				}
+        .s1-img-2 {
+          opacity: 1;
+          display: block;
+        }
+      }
     }
 
     @include min-width(1280px) {
       width: 31.5%;
     }
 
-    .s1-img-1 {
-      > img {
+    .s1-img-2 {
+      opacity: 0;
+      display: none;
+
+			> img {
         width: 100%;
       }
     }
 
-    .s1-img-2 {
-      margin-top: 1rem;
-
-      @include min-width(768px) {
-        margin-top: 3rem;
-      }
-
-      @include min-width(1025px) {
-        margin-top: 1rem;
-      }
-
+    .s1-img-1 {
       > img {
         width: 100%;
+      }
+      @include min-width(1025px) {
       }
     }
 
@@ -291,7 +371,7 @@ export default {};
     background: url("@/assets/images/pic/pic_02-4_people.svg") no-repeat;
     background-size: contain;
     background-position: 50% 50%;
-		z-index: 10;
+    z-index: 10;
 
     @include min-width(1025px) {
       width: 188.3px;

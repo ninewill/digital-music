@@ -150,6 +150,23 @@ export default {
   }
 }
 
+.section0{
+	position: relative;
+
+
+	&::after{
+		content: "";
+		width: 20px;
+		height: 436px;
+		display: block;
+		position: absolute;
+		top: 80px;
+		right:0px;
+		background: url("@/assets/images/newpic/s0_deco_text.svg") no-repeat
+      center/cover;
+	}
+}
+
 .section1 {
 	position: relative;
 
@@ -160,7 +177,7 @@ export default {
 			height: 153px;
 			display: block;
 			position: absolute;
-			top: 0;
+			top: -50px;
 			left: 0;
 			background: url("@/assets/images/newpic/s2_bg_deco01.svg") no-repeat
       center/contain;
@@ -172,7 +189,7 @@ export default {
 			height: 200px;
 			display: block;
 			position: absolute;
-			top: 100px;
+			top: 0px;
 			right: 0;
 			background: url("@/assets/images/newpic/s2_bg_deco02.svg") no-repeat
       center/contain;

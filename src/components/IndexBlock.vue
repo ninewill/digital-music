@@ -1,15 +1,12 @@
 <template>
   <div>
     <div class="idx-banner-m"></div>
-    <div class="index-info">
-			<img src="@/assets/images/newpic/s1_logo.svg" alt="圖片" />
-		</div>
     <video class="" autoplay muted loop>
       <source src="@/assets/images/video/FINAL.mp4" type="video/mp4" />
     </video>
     <div class="sonic-wrap">
       <div class="sonic">
-        <img src="@/assets/images/pic/sonic.gif" alt="圖片" />
+        <img src="@/assets/images/newpic/s1_text.png" alt="圖片" />
       </div>
     </div>
   </div>
@@ -40,22 +37,6 @@ export default {
   }
 }
 
-.index-info {
-  display: none;
-
-  @include min-width(768px) {
-    display: block;
-    margin-left: 0;
-    margin-right: auto;
-    font-weight: 400;
-    font-size: 18px;
-    color: $color-primary-1;
-  }
-
-  @include min-width(1025px) {
-    font-size: 24px;
-  }
-}
 
 video {
   display: none;
@@ -89,7 +70,7 @@ video {
   display: none;
 
   @include min-width(768px) {
-    width: 100%;
+    width: 60%;
     display: block;
   }
 

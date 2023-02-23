@@ -2,6 +2,11 @@
   <!--header-->
   <header id="header">
     <div class="mainheader">
+      <div class="side-left">
+        <div class="index-info">
+          <img src="@/assets/images/newpic/s1_logo.svg" alt="圖片" />
+        </div>
+      </div>
       <div class="side-right">
         <div class="side-right-block">
           <div class="logo-btn">
@@ -12,9 +17,9 @@
               >赫彩設計學院</a
             >
           </div>
-          <div class="menu-btn">
+          <!--<div class="menu-btn">
             <a href="javascript:;" title="menu">menu</a>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
@@ -38,8 +43,6 @@ export default {
 // * 共用
 // * ==========================================================================
 
-
-
 // * ==========================================================================
 // * HEADER 區塊
 // * ==========================================================================
@@ -52,7 +55,7 @@ export default {
   position: fixed;
   z-index: 999;
 
-	  @include min-width(1025px) {
+  @include min-width(1025px) {
     margin-top: 50px;
   }
 }
@@ -60,7 +63,7 @@ export default {
 .mainheader {
   width: calc(100% - 40px);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
@@ -81,6 +84,23 @@ export default {
 
   @include min-width(1920px) {
     width: 1400px;
+  }
+}
+
+.index-info {
+  display: none;
+
+  @include min-width(768px) {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-primary-1;
+  }
+
+  @include min-width(1025px) {
+    font-size: 24px;
   }
 }
 
@@ -105,7 +125,6 @@ export default {
       width: 167px;
       height: 38px;
       display: block;
-      margin-right: 1rem;
       position: relative;
 
       > a {
@@ -115,57 +134,57 @@ export default {
         position: absolute;
         top: 0px;
         left: 0px;
-        background: url("@/assets/images/btn/btn_appedu_default.svg") no-repeat
-          center/contain;
+        background: url("@/assets/images/newbtn/s0_appedo_default.svg")
+          no-repeat center/contain;
         @include hidetext;
         transition: 0.2s;
 
         @include min-width(1025px) {
           &:hover {
-            background: url("@/assets/images/btn/btn_appedu_hover.svg")
+            background: url("@/assets/images/newbtn/s0_appedo_hover.svg")
               no-repeat center/contain;
           }
         }
       }
     }
 
-    .menu-btn {
-      width: 103px;
-      height: 38px;
-      display: block;
-      position: relative;
+    //.menu-btn {
+    //  width: 103px;
+    //  height: 38px;
+    //  display: block;
+    //  position: relative;
 
-      @include min-width(1025px) {
-        //margin-right: 0rem;
-      }
+    //  @include min-width(1025px) {
+    //    //margin-right: 0rem;
+    //  }
 
-      > a {
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background: url("@/assets/images/btn/btn_menu_default.svg") no-repeat
-          center/contain;
-        @include hidetext;
-        transition: 0.2s;
+    //  > a {
+    //    width: 100%;
+    //    height: 100%;
+    //    display: block;
+    //    position: absolute;
+    //    top: 0px;
+    //    left: 0px;
+    //    background: url("@/assets/images/btn/btn_menu_default.svg") no-repeat
+    //      center/contain;
+    //    @include hidetext;
+    //    transition: 0.2s;
 
-        @include min-width(1025px) {
-          &:hover {
-            background: url("@/assets/images/btn/btn_menu_hover.svg") no-repeat
-              center/contain;
-          }
-        }
-      }
+    //    @include min-width(1025px) {
+    //      &:hover {
+    //        background: url("@/assets/images/btn/btn_menu_hover.svg") no-repeat
+    //          center/contain;
+    //      }
+    //    }
+    //  }
 
-      &.close-btn {
-        > a {
-          background: url("@/assets/images/btn/btn-close.svg") no-repeat
-            center/contain;
-        }
-      }
-    }
+    //  &.close-btn {
+    //    > a {
+    //      background: url("@/assets/images/btn/btn-close.svg") no-repeat
+    //        center/contain;
+    //    }
+    //  }
+    //}
   }
 }
 </style>
