@@ -123,12 +123,12 @@ body {
 }
 
 #main {
-  padding-top: 85px;
+  //padding-top: 85px;
   padding-bottom: 85px;
   position: relative;
 
   @include min-width(1025px) {
-    padding-top: 90px;
+    //padding-top: 90px;
     padding-bottom: 150px;
   }
 }

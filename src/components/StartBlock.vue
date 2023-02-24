@@ -8,7 +8,9 @@
         <div class="h3">
           為影像賦能的幕後推手——音效設計師、音訊工程師、配音員
         </div>
-        <span class="s1-description">完整系統化課程規劃，學習不再是當無頭蒼蠅</span>
+        <span class="s1-description"
+          >完整系統化課程規劃，學習不再是當無頭蒼蠅</span
+        >
       </div>
       <ul class="s1-item-wrap">
         <li>
@@ -62,21 +64,35 @@
           <p class="s1-info">業界標準流程、接案報價 擬定合約、專案時程安排</p>
         </li>
       </ul>
-      <div class="s1-content-title-2"></div>
-      <ul class="s1-item-2">
+      <div class="s1-content-title-2">
+        <div class="h3">全方位引領最快捷徑，培養業界爭搶人才</div>
+        <span class="s1-description"
+          >星耀級別配音、成音講師帶你階段性傳授業界技能</span
+        >
+      </div>
+      <ul class="s1-item-2-wrap">
         <li>
-          <div class="s1-img-2">
-            <img src="@/assets/images/pic/pic_02-1.svg" alt="圖片" />
+          <div class="s1-img-1">
+            <img src="@/assets/images/newpic/s3_card1_default.svg" alt="圖片" />
+          </div>
+					<div class="s1-img-2">
+            <img src="@/assets/images/newpic/s3_card1_hover.svg" alt="圖片" />
           </div>
         </li>
         <li>
-          <div class="s1-img-2">
-            <img src="@/assets/images/pic/pic_02-2.svg" alt="圖片" />
+          <div class="s1-img-1">
+            <img src="@/assets/images/newpic/s3_card2_default.svg" alt="圖片" />
+          </div>
+					<div class="s1-img-2">
+            <img src="@/assets/images/newpic/s3_card2_hover.svg" alt="圖片" />
           </div>
         </li>
         <li>
-          <div class="s1-img-2">
-            <img src="@/assets/images/pic/pic_02-3.svg" alt="圖片" />
+          <div class="s1-img-1">
+            <img src="@/assets/images/newpic/s3_card3_default.svg" alt="圖片" />
+          </div>
+					<div class="s1-img-2">
+            <img src="@/assets/images/newpic/s3_card3_hover.svg" alt="圖片" />
           </div>
         </li>
       </ul>
@@ -146,17 +162,18 @@ export default {};
   }
 }
 .s1-content-title-1 {
+  width: 870px;
+  margin: 0 auto;
   text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
 
   > .h3 {
     display: flex;
     justify-content: center;
     position: relative;
     padding: 2rem 3rem;
-    display: inline-block;
+    display: block;
     border: 1px solid $color-primary-1;
     border-radius: 15px;
     font-weight: 700;
@@ -181,7 +198,7 @@ export default {};
   > .s1-description {
     margin-top: 1.5rem;
     position: relative;
-    display: inline-block;
+    display: block;
     font-size: 24px;
     color: $color-white;
 
@@ -191,7 +208,7 @@ export default {};
       margin-top: -8px;
       position: absolute;
       top: 50%;
-      left: -110px;
+      left: 60px;
       width: 90px;
       height: 16px;
       background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
@@ -205,7 +222,7 @@ export default {};
       margin-top: -8px;
       position: absolute;
       top: 50%;
-      right: -110px;
+      right: 60px;
       width: 90px;
       height: 16px;
       background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
@@ -222,31 +239,87 @@ export default {};
   }
 }
 .s1-content-title-2 {
-  width: 88%;
+  width: 870px;
   margin: 0 auto;
-  padding-bottom: 34.32%;
-  background: url("@/assets/images/pic/mobile/pic_02_title02.svg") no-repeat;
-  background-size: contain;
-  background-position: 50% 50%;
+  margin-top: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 
   @include min-width(768px) {
-    width: 50%;
   }
 
   @include min-width(1025px) {
-    width: 100%;
-    margin-top: 0%;
-    padding-bottom: 12.85%;
-    background: url("@/assets/images/pic/pic_02_title.svg") no-repeat;
-    background-size: contain;
-    background-position: 0 100%;
+  }
+
+  > .h3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 3rem;
+    display: block;
+    border: 1px solid $color-primary-1;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 28px;
+    color: $color-primary-1;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      margin-left: -131px;
+      width: 262px;
+      height: 48px;
+      background: url("@/assets/images/newpic/s3_title.png") no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+  }
+  > .s1-description {
+    margin-top: 1.5rem;
+    position: relative;
+    display: block;
+    font-size: 24px;
+    color: $color-white;
+
+    &::after {
+      content: "";
+      display: block;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      width: 90px;
+      height: 16px;
+      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      width: 90px;
+      height: 16px;
+      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      transform: scaleX(-1);
+    }
   }
 }
 .s1-item-wrap {
-	width: 80%;
-	margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
   margin-top: 6rem;
-	
+
   @include min-width(1025px) {
     padding-bottom: 5rem;
     padding-left: 0;
@@ -261,7 +334,6 @@ export default {};
   }
 
   @include min-width(1440px) {
-    margin-top: 9rem;
     padding-bottom: 5rem;
   }
 
@@ -297,6 +369,12 @@ export default {};
       width: 28%;
     }
 
+		.s1-img-1 {
+      > img {
+        width: 100%;
+      }
+    }
+
     .s1-img-2 {
       opacity: 0;
       display: none;
@@ -306,21 +384,13 @@ export default {};
       }
     }
 
-    .s1-img-1 {
-      > img {
-        width: 100%;
-      }
-      @include min-width(1025px) {
-      }
+    > .h3 {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 22px;
+      color: $color-primary-1;
     }
-
-		>.h3{
-			margin-top: 1.5rem;
-			text-align: center;
-			font-weight: 700;
-			font-size: 22px;
-			color: $color-primary-1;
-		}
 
     .s1-info {
       margin-top: 2rem;
@@ -344,15 +414,14 @@ export default {};
     }
   }
 }
-.s1-item-2 {
+.s1-item-2-wrap {
   position: relative;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  padding-bottom: 3.8rem;
+	width: 80%;
+  margin: 0 auto;
+  margin-top: 6rem;
 
   @include min-width(1025px) {
     margin-top: 5rem;
-    padding-right: 2rem;
     padding-left: 0;
     display: flex;
     align-items: center;
@@ -360,46 +429,12 @@ export default {};
   }
 
   @include min-width(1280px) {
-    margin-top: 3rem;
+    margin-top: 6rem;
+    padding-bottom: 3rem;
   }
 
   @include min-width(1440px) {
-    margin-top: 5rem;
-  }
-
-  &:after {
-    content: "";
-    display: block;
-    width: 188.3px;
-    height: 206.5px;
-    position: absolute;
-    bottom: -49px;
-    right: 0;
-    background: url("@/assets/images/pic/pic_02-4_people.svg") no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
-    z-index: 10;
-
-    @include min-width(1025px) {
-      width: 188.3px;
-      height: 206.5px;
-      right: 8%;
-      top: -45%;
-      bottom: auto;
-    }
-
-    @include min-width(1440px) {
-      width: 210px;
-      height: 295px;
-      right: 8%;
-      top: -47%;
-    }
-
-    @include min-width(1920px) {
-      width: 269px;
-      height: 308px;
-      right: 5%;
-    }
+    padding-bottom: 5rem;
   }
 
   > li {
@@ -408,43 +443,39 @@ export default {};
     position: relative;
     z-index: 5;
 
+    @include min-width(768px) {
+    }
+
     @include min-width(1025px) {
       width: 30%;
       margin-bottom: 0;
 
-      &::after {
-        content: "";
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 50%;
-        right: -19%;
-        display: block;
-        background: url("@/assets/images/pic/pic_02-5_cross.svg") no-repeat;
-        background-size: contain;
-        background-position: 0 100%;
-
-        @include min-width(1025px) {
-          width: 40px;
-          height: 40px;
-          right: -20%;
-        }
-
-        @include min-width(1440px) {
-          width: 50px;
-          height: 50px;
-          right: -19%;
-        }
-      }
-
-      &:last-child {
-        &::after {
+      &:hover {
+        .s1-img-1 {
+          opacity: 0;
           display: none;
+        }
+        .s1-img-2 {
+          opacity: 1;
+          display: block;
         }
       }
     }
 
+    @include min-width(1280px) {
+      width: 28%;
+    }
+
+		.s1-img-1 {
+      > img {
+        width: 100%;
+      }
+    }
+
     .s1-img-2 {
+      opacity: 0;
+      display: none;
+
       > img {
         width: 100%;
       }
