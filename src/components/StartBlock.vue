@@ -4,6 +4,7 @@
       <h2 class="h2">START</h2>
     </div>
     <div class="s-content s1-content">
+      <!--start1-->
       <div class="s1-content-title-1">
         <div class="h3">
           為影像賦能的幕後推手——音效設計師、音訊工程師、配音員
@@ -64,6 +65,7 @@
           <p class="s1-info">業界標準流程、接案報價 擬定合約、專案時程安排</p>
         </li>
       </ul>
+      <!--start2-->
       <div class="s1-content-title-2">
         <div class="h3">全方位引領最快捷徑，培養業界爭搶人才</div>
         <span class="s1-description"
@@ -75,7 +77,7 @@
           <div class="s1-img-1">
             <img src="@/assets/images/newpic/s3_card1_default.svg" alt="圖片" />
           </div>
-					<div class="s1-img-2">
+          <div class="s1-img-2">
             <img src="@/assets/images/newpic/s3_card1_hover.svg" alt="圖片" />
           </div>
         </li>
@@ -83,7 +85,7 @@
           <div class="s1-img-1">
             <img src="@/assets/images/newpic/s3_card2_default.svg" alt="圖片" />
           </div>
-					<div class="s1-img-2">
+          <div class="s1-img-2">
             <img src="@/assets/images/newpic/s3_card2_hover.svg" alt="圖片" />
           </div>
         </li>
@@ -91,7 +93,7 @@
           <div class="s1-img-1">
             <img src="@/assets/images/newpic/s3_card3_default.svg" alt="圖片" />
           </div>
-					<div class="s1-img-2">
+          <div class="s1-img-2">
             <img src="@/assets/images/newpic/s3_card3_hover.svg" alt="圖片" />
           </div>
         </li>
@@ -241,6 +243,7 @@ export default {};
 .s1-content-title-2 {
   width: 870px;
   margin: 0 auto;
+  position: relative;
   margin-top: 5rem;
   text-align: center;
   display: flex;
@@ -250,6 +253,19 @@ export default {};
   }
 
   @include min-width(1025px) {
+  }
+
+  &:before {
+    content: "";
+		position: absolute;
+		top: -120px;
+		left: -280px;
+		width: 239px;
+		height: 331px;
+    display: block;
+    background: url("@/assets/images/newpic/s3_bg_earphone.png") no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
   }
 
   > .h3 {
@@ -369,7 +385,7 @@ export default {};
       width: 28%;
     }
 
-		.s1-img-1 {
+    .s1-img-1 {
       > img {
         width: 100%;
       }
@@ -416,7 +432,7 @@ export default {};
 }
 .s1-item-2-wrap {
   position: relative;
-	width: 80%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 6rem;
 
@@ -466,7 +482,7 @@ export default {};
       width: 28%;
     }
 
-		.s1-img-1 {
+    .s1-img-1 {
       > img {
         width: 100%;
       }

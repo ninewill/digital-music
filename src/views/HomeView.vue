@@ -8,13 +8,6 @@
     <section id="1" class="section-block section1">
       <StartBlock />
     </section>
-    <!--Border Line-->
-    <div class="section-block border-line">
-      <span></span>
-      <span class="radius radius-r"></span>
-      <span class="radius radius-l"></span>
-      <span></span>
-    </div>
     <!--COURSE-->
     <section class="section-block section2">
       <CourseBlock />
@@ -121,35 +114,6 @@ export default {
   position: relative;
 }
 
-//Border Line
-.border-line {
-  display: flex;
-  flex-wrap: wrap;
-
-  > span {
-    display: block;
-    width: 50%;
-    height: 50px;
-
-    &.radius {
-      border-color: $color-primary-1;
-      border-width: 1px;
-    }
-
-    &.radius-r {
-      border-bottom-style: dotted;
-      border-right-style: dotted;
-      border-bottom-right-radius: 50px;
-    }
-
-    &.radius-l {
-      border-top-style: dotted;
-      border-left-style: dotted;
-      border-top-left-radius: 50px;
-    }
-  }
-}
-
 .section0{
 	position: relative;
 
@@ -205,6 +169,7 @@ export default {
   }
 }
 .section2 {
+	margin-top: 5rem;
   position: relative;
 }
 .s2-content-silde {
