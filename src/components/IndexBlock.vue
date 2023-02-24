@@ -2,7 +2,7 @@
   <div>
     <div class="idx-banner-m"></div>
     <video class="" autoplay muted loop>
-      <source src="@/assets/images/video/FINAL.mp4" type="video/mp4" />
+      <source src="@/assets/images/video/Comp1.mp4" type="video/mp4" />
     </video>
     <div class="sonic-wrap">
       <div class="sonic">

@@ -8,7 +8,7 @@
         <div class="h3">
           為影像賦能的幕後推手——音效設計師、音訊工程師、配音員
         </div>
-        <span>完整系統化課程規劃，學習不再是當無頭蒼蠅</span>
+        <span class="s1-description">完整系統化課程規劃，學習不再是當無頭蒼蠅</span>
       </div>
       <ul class="s1-item-wrap">
         <li>
@@ -24,8 +24,9 @@
               alt="圖片"
             />
           </div>
+          <div class="h3">輔助影像學習者</div>
           <p class="s1-info">
-            零基礎至出片、有基礎至精進技法，用最短時間做出完美成品！
+            動畫師、遊戲設計師、影視特效師、配音員、擬音師、剪輯師
           </p>
         </li>
         <li>
@@ -41,9 +42,8 @@
               alt="圖片"
             />
           </div>
-          <p class="s1-info">
-            歌唱健檢、打穩基礎、提升技法，錄音室實戰，競賽彩排演出。
-          </p>
+          <div class="h3">精進成音知識技術者</div>
+          <p class="s1-info">系統化整合業界技術需求， 熟悉軟硬體操作模式</p>
         </li>
         <li>
           <div class="s1-img-1">
@@ -58,9 +58,8 @@
               alt="圖片"
             />
           </div>
-          <p class="s1-info">
-            掌握比稿要領，知名講師引介管道，絕不讓自己吃虧，建立穩定收入。
-          </p>
+          <div class="h3">獨立接案專案管理者</div>
+          <p class="s1-info">業界標準流程、接案報價 擬定合約、專案時程安排</p>
         </li>
       </ul>
       <div class="s1-content-title-2"></div>
@@ -148,6 +147,9 @@ export default {};
 }
 .s1-content-title-1 {
   text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
   > .h3 {
     display: flex;
@@ -155,11 +157,11 @@ export default {};
     position: relative;
     padding: 2rem 3rem;
     display: inline-block;
-    border: 1px solid #ff8e30;
+    border: 1px solid $color-primary-1;
     border-radius: 15px;
     font-weight: 700;
     font-size: 28px;
-    color: #ff8e30;
+    color: $color-primary-1;
 
     &::after {
       content: "";
@@ -176,7 +178,7 @@ export default {};
     }
   }
 
-  > span {
+  > .s1-description {
     margin-top: 1.5rem;
     position: relative;
     display: inline-block;
@@ -241,13 +243,12 @@ export default {};
   }
 }
 .s1-item-wrap {
+	width: 80%;
+	margin: 0 auto;
   margin-top: 6rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-
+	
   @include min-width(1025px) {
     padding-bottom: 5rem;
-    padding-right: 2rem;
     padding-left: 0;
     display: flex;
     align-items: center;
@@ -262,7 +263,6 @@ export default {};
   @include min-width(1440px) {
     margin-top: 9rem;
     padding-bottom: 5rem;
-    padding-right: 5rem;
   }
 
   > li {
@@ -278,15 +278,14 @@ export default {};
     }
 
     @include min-width(1025px) {
-      width: 32%;
+      width: 30%;
       margin-bottom: 0;
 
       &:hover {
-
-				.s1-img-1 {
-					opacity: 0;
-					display: none;
-				}
+        .s1-img-1 {
+          opacity: 0;
+          display: none;
+        }
         .s1-img-2 {
           opacity: 1;
           display: block;
@@ -295,14 +294,14 @@ export default {};
     }
 
     @include min-width(1280px) {
-      width: 31.5%;
+      width: 28%;
     }
 
     .s1-img-2 {
       opacity: 0;
       display: none;
 
-			> img {
+      > img {
         width: 100%;
       }
     }
@@ -315,8 +314,16 @@ export default {};
       }
     }
 
+		>.h3{
+			margin-top: 1.5rem;
+			text-align: center;
+			font-weight: 700;
+			font-size: 22px;
+			color: $color-primary-1;
+		}
+
     .s1-info {
-      margin-top: 1rem;
+      margin-top: 2rem;
       line-height: 26px;
       font-weight: 400;
       font-size: 18px;
