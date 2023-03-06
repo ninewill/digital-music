@@ -3,62 +3,62 @@
     <div class="s-title s2-title">
       <div class="s2-title-left">
         <div class="s2-title-left-l">
-          <img src="@/assets/images/newpic/s4_part1.png" alt="圖片" />
+          <img src="@/assets/images/newpic/s4_part2.png" alt="圖片" />
         </div>
         <div class="s2-title-left-r">
-          <div class="h3">Mixcraft 輕鬆快速上手</div>
-          <p>輕鬆入門、快速上手，還有取之不盡的強大素材庫！</p>
+          <div class="h3">Nuendo高效進階聲音後製神器</div>
+          <p>更高的聲音品質、更強的影音後製功能，搶先全台唯一認證中心！</p>
         </div>
       </div>
       <div class="s2-title-right">
-        <img src="@/assets/images/newpic/s4_p1hour.png" alt="圖片" />
+        <img src="@/assets/images/newpic/s4_p2hour.png" alt="圖片" />
       </div>
     </div>
     <!--COURSE Swiper-->
-    <div class="swiper-slid-part1">
+    <div class="swiper-slid-part2">
       <!-- Swiper -->
-      <div class="swiper mySwiper-part1 section-block">
+      <div class="swiper mySwiper-part2 section-block">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="@/assets/images/newpic/s4_p1_01.png" alt="圖片" />
+            <img src="@/assets/images/newpic/s4_p2_01.png" alt="圖片" />
           </div>
           <div class="swiper-slide">
-            <img src="@/assets/images/newpic/s4_p1_02.png" alt="圖片" />
+            <img src="@/assets/images/newpic/s4_p2_02.png" alt="圖片" />
           </div>
           <div class="swiper-slide">
-            <img src="@/assets/images/newpic/s4_p1_03.png" alt="圖片" />
+            <img src="@/assets/images/newpic/s4_p2_03.png" alt="圖片" />
           </div>
           <div class="swiper-slide">
-            <img src="@/assets/images/newpic/s4_p1_04.png" alt="圖片" />
+            <img src="@/assets/images/newpic/s4_p2_04.png" alt="圖片" />
           </div>
           <div class="swiper-slide">
-            <img src="@/assets/images/newpic/s4_p1_05.png" alt="圖片" />
+            <img src="@/assets/images/newpic/s4_p2_05.png" alt="圖片" />
           </div>
           <div class="swiper-slide">
-            <img src="@/assets/images/newpic/s4_p1_06.png" alt="圖片" />
+            <img src="@/assets/images/newpic/s4_p2_06.png" alt="圖片" />
           </div>
         </div>
-				<div class="swiper-pagination swiper-pagination-swiper"></div>
+        <div class="swiper-pagination swiper-pagination-swiper"></div>
       </div>
-      <div class="swiper-button-next arrow-btn-next3"></div>
-      <div class="swiper-button-prev arrow-btn-prev3"></div>
+      <div class="swiper-button-next arrow-btn-next4"></div>
+      <div class="swiper-button-prev arrow-btn-prev4"></div>
     </div>
     <div class="course-btn">
-      <a class="cd-popup-trigger0" href="javascript:;">觀看完整課綱</a>
+      <a class="cd-popup-trigger2" href="javascript:;">觀看完整課綱</a>
     </div>
-    <CdPopup />
+    <CdPopup01 />
   </div>
 </template>
 
 <script>
-import CdPopup from "@/components/CdPopup01.vue";
+import CdPopup01 from "@/components/CdPopup02.vue";
 
 export default {
   components: {
-    CdPopup,
+    CdPopup01,
   },
   mounted() {
-    var swiper5 = new Swiper(".swiper-slid-part1 .mySwiper-part1", {
+    var swiper5 = new Swiper(".swiper-slid-part2 .mySwiper-part2", {
       slidesPerView: 1,
       spaceBetween: 15,
       slidesPerGroup: 3,
@@ -73,13 +73,13 @@ export default {
           slidesPerView: 3,
         },
       },
-			pagination: {
-        el: ".mySwiper-part1 .swiper-pagination",
+      pagination: {
+        el: ".mySwiper-part2 .swiper-pagination",
         clickable: true,
       },
       navigation: {
-        nextEl: ".arrow-btn-next3",
-        prevEl: ".arrow-btn-prev3",
+        nextEl: ".arrow-btn-next4",
+        prevEl: ".arrow-btn-prev4",
       },
     });
   },
@@ -149,11 +149,11 @@ export default {
   }
 }
 
-.mySwiper-part1 {
+.mySwiper-part2 {
   overflow: hidden;
 }
 
-.swiper-slid-part1 {
+.swiper-slid-part2 {
   padding: 20px;
   margin-top: 3rem;
   position: relative;
@@ -178,8 +178,8 @@ export default {
   }
 }
 
-.arrow-btn-next3,
-.arrow-btn-prev3 {
+.arrow-btn-next4,
+.arrow-btn-prev4 {
   width: 50px;
   height: 50px;
   margin-top: -25px;
@@ -190,7 +190,7 @@ export default {
   }
 }
 
-.arrow-btn-next3 {
+.arrow-btn-next4 {
   right: 5%;
   background-image: url("@/assets/images/newbtn/s4_arrow_default.svg");
 
@@ -205,7 +205,7 @@ export default {
   }
 }
 
-.arrow-btn-prev3 {
+.arrow-btn-prev4 {
   left: 5%;
   background-image: url("@/assets/images/newbtn/s4_arrow_default.svg");
   @include min-width(1280px) {
@@ -231,7 +231,7 @@ export default {
   position: absolute;
   bottom: -35px;
   left: 50%;
-	z-index: 10;
+  z-index: 10;
   margin-left: -143.04px;
 
   @include min-width(768px) {
@@ -270,6 +270,4 @@ export default {
     }
   }
 }
-
-
 </style>

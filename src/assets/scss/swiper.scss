@@ -819,3 +819,46 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
 }
+
+
+.swiper-pagination-swiper {
+  bottom: 100px !important;
+
+	@include min-width(768px) {
+		bottom: 80px !important;
+	}
+
+	@include min-width(1025px) {
+		display: block;
+		bottom: 65px !important;
+  }
+
+	@include min-width(1440px) {
+		bottom: -20px !important;
+		left: 12% !important; 
+  }
+
+
+  .swiper-pagination-bullet {
+    background-color: $color-black;
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background: $color-primary-1;
+    }
+  }
+}
+
+
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+}
+
+.swiper-pagination-swiper.swiper-pagination-bullets{
+	border: 1px solid $color-primary-1;
+	padding: 0.25rem;
+	border-radius: 20px;
+}

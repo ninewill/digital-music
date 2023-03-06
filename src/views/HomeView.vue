@@ -13,11 +13,8 @@
       <CourseBlock />
     </section>
     <!--COURSE Card slide-->
-    <div id="2" class="s2-content-silde">
-      <div class="s2-content-silde-title">
-        <img src="@/assets/images/pic/pic_05_title.svg" alt="圖片" />
-      </div>
-      <Swiper />
+    <div id="2" class="section-block section2-1">
+      <CourseBlock2 />
     </div>
     <!--STUDENT WORKS-->
     <section class="section-block section3">
@@ -49,6 +46,7 @@
 import IndexBlock from "@/components/IndexBlock.vue";
 import StartBlock from "@/components/StartBlock.vue";
 import CourseBlock from "@/components/CourseBlock.vue";
+import CourseBlock2 from "@/components/CourseBlock2.vue";
 import StudentWorksBlock from "@/components/StudentWorksBlock.vue";
 import DreamOnBlock from "@/components/DreamOnBlock.vue";
 import DreamOnBlock_1 from "@/components/DreamOnBlock-1.vue";
@@ -61,6 +59,7 @@ export default {
     IndexBlock,
     StartBlock,
     CourseBlock,
+    CourseBlock2,
     StudentWorksBlock,
     DreamOnBlock,
     DreamOnBlock_1,
@@ -114,50 +113,49 @@ export default {
   position: relative;
 }
 
-.section0{
-	position: relative;
+.section0 {
+  position: relative;
 
-
-	&::after{
-		content: "";
-		width: 20px;
-		height: 436px;
-		display: block;
-		position: absolute;
-		top: 80px;
-		right:0px;
-		background: url("@/assets/images/newpic/s0_deco_text.svg") no-repeat
+  &::after {
+    content: "";
+    width: 20px;
+    height: 436px;
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    background: url("@/assets/images/newpic/s0_deco_text.svg") no-repeat
       center/cover;
-	}
+  }
 }
 
 .section1 {
-	position: relative;
+  position: relative;
 
-	@include min-width(1025px) {
-    &::before{
-			content: "";
-			width: 147px;
-			height: 153px;
-			display: block;
-			position: absolute;
-			top: -50px;
-			left: 0;
-			background: url("@/assets/images/newpic/s2_bg_deco01.svg") no-repeat
-      center/contain;
-		}
+  @include min-width(1025px) {
+    &::before {
+      content: "";
+      width: 147px;
+      height: 153px;
+      display: block;
+      position: absolute;
+      top: -50px;
+      left: 0;
+      background: url("@/assets/images/newpic/s2_bg_deco01.svg") no-repeat
+        center/contain;
+    }
 
-		&::after{
-			content: "";
-			width: 200px;
-			height: 200px;
-			display: block;
-			position: absolute;
-			top: 0px;
-			right: 0;
-			background: url("@/assets/images/newpic/s2_bg_deco02.svg") no-repeat
-      center/contain;
-		}
+    &::after {
+      content: "";
+      width: 200px;
+      height: 200px;
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      background: url("@/assets/images/newpic/s2_bg_deco02.svg") no-repeat
+        center/contain;
+    }
   }
 
   @include min-width(1280px) {
@@ -169,8 +167,25 @@ export default {
   }
 }
 .section2 {
-	margin-top: 5rem;
+  margin-top: 5rem;
   position: relative;
+}
+
+.section2-1 {
+  margin-top: 15rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 600px;
+    position: absolute;
+    top: -200px;
+    right: -25%;
+    background: url("@/assets/images/newpic/s4_bg_micro.png") no-repeat
+      center/contain;
+  }
 }
 .s2-content-silde {
   margin-top: 3rem;
@@ -178,7 +193,7 @@ export default {
   border-bottom: 2px solid $color-primary-1;
 
   @include min-width(1025px) {
-    margin-top: 6rem;
+    margin-top: 15rem;
   }
 
   &:after {
@@ -195,7 +210,7 @@ export default {
 
     @include min-width(768px) {
       border-width: 35px 24px 0 24px;
-			margin-left: -24px;
+      margin-left: -24px;
     }
   }
 
