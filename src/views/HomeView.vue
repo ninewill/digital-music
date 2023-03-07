@@ -40,6 +40,7 @@
       <Witness />
     </section>
   </div>
+	<Cursor />
 </template>
 
 <script>
@@ -53,6 +54,7 @@ import DreamOnBlock_1 from "@/components/DreamOnBlock-1.vue";
 import DreamOnBlock_2 from "@/components/DreamOnBlock-2.vue";
 import Witness from "@/components/Witness.vue";
 import Swiper from "@/components/Swiper.vue";
+import Cursor from "@/components/Cursor.vue";
 
 export default {
   components: {
@@ -66,7 +68,11 @@ export default {
     DreamOnBlock_2,
     Witness,
     Swiper,
+		Cursor,
   },
+	mounted() {
+
+	}
 };
 </script>
 
