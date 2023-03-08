@@ -18,8 +18,11 @@
     </div>
     <!--STUDENT WORKS-->
     <section class="section-block section3">
-      <StudentWorksBlock />
+      <TrainingCenter />
     </section>
+		<div class="tc-bar">
+      <TrainingCenterBar />
+    </div>
     <!--DREAM ON-->
     <section class="section-block section4">
       <DreamOnBlock />
@@ -48,7 +51,8 @@ import IndexBlock from "@/components/IndexBlock.vue";
 import StartBlock from "@/components/StartBlock.vue";
 import CourseBlock from "@/components/CourseBlock.vue";
 import CourseBlock2 from "@/components/CourseBlock2.vue";
-import StudentWorksBlock from "@/components/StudentWorksBlock.vue";
+import TrainingCenter from "@/components/TrainingCenter.vue";
+import TrainingCenterBar from "@/components/TrainingCenterBar.vue";
 import DreamOnBlock from "@/components/DreamOnBlock.vue";
 import DreamOnBlock_1 from "@/components/DreamOnBlock-1.vue";
 import DreamOnBlock_2 from "@/components/DreamOnBlock-2.vue";
@@ -62,7 +66,8 @@ export default {
     StartBlock,
     CourseBlock,
     CourseBlock2,
-    StudentWorksBlock,
+    TrainingCenter,
+		TrainingCenterBar,
     DreamOnBlock,
     DreamOnBlock_1,
     DreamOnBlock_2,
@@ -243,16 +248,22 @@ export default {
   position: relative;
 
   @include min-width(768px) {
-    margin-top: 20rem;
+    margin-top: 15rem;
   }
 
   @include min-width(1025px) {
-    margin-top: 23rem;
+    margin-top: 18rem;
   }
 }
 .section4 {
   margin-top: 12rem;
   position: relative;
+}
+
+.tc-bar{
+  padding: 3.75rem 0;
+	border-top: 1px solid $color-primary-1;
+	border-bottom: 1px solid $color-primary-1;
 }
 
 .music-bar {

@@ -37,10 +37,10 @@ export default {
 
         $("a").hover(
           function () {
-            TweenMax.to(ball, 0.6, { attr: { r: "50", ease: Power3.easeOut } });
+            TweenMax.to(ball, 0.2, { attr: { r: "50", ease: Power3.easeOut } });
           },
           function () {
-            TweenMax.to(ball, 0.6, { attr: { r: "8", ease: Power3.easeOut } });
+            TweenMax.to(ball, 0.2, { attr: { r: "8", ease: Power3.easeOut } });
           }
         );
       }
