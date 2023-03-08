@@ -16,15 +16,19 @@
     <div id="2" class="section-block section2-1">
       <CourseBlock2 />
     </div>
-    <!--STUDENT WORKS-->
+    <!--Training Center-->
     <section class="section-block section3">
       <TrainingCenter />
     </section>
 		<div class="tc-bar">
       <TrainingCenterBar />
     </div>
-    <!--DREAM ON-->
+    <!--SALARY-->
     <section class="section-block section4">
+      <Salary />
+    </section>
+		<!--Dream OnBlock-->
+    <section class="section-block section5">
       <DreamOnBlock />
     </section>
     <div class="music-bar">
@@ -39,7 +43,7 @@
       </div>
     </div>
     <!--WITNESS-->
-    <section class="witness-block section5">
+    <section class="witness-block section6">
       <Witness />
     </section>
   </div>
@@ -53,6 +57,7 @@ import CourseBlock from "@/components/CourseBlock.vue";
 import CourseBlock2 from "@/components/CourseBlock2.vue";
 import TrainingCenter from "@/components/TrainingCenter.vue";
 import TrainingCenterBar from "@/components/TrainingCenterBar.vue";
+import Salary from "@/components/Salary.vue";
 import DreamOnBlock from "@/components/DreamOnBlock.vue";
 import DreamOnBlock_1 from "@/components/DreamOnBlock-1.vue";
 import DreamOnBlock_2 from "@/components/DreamOnBlock-2.vue";
@@ -68,6 +73,7 @@ export default {
     CourseBlock2,
     TrainingCenter,
 		TrainingCenterBar,
+		Salary,
     DreamOnBlock,
     DreamOnBlock_1,
     DreamOnBlock_2,
@@ -256,6 +262,11 @@ export default {
   }
 }
 .section4 {
+  margin-top: 12rem;
+  position: relative;
+}
+
+.section5 {
   margin-top: 12rem;
   position: relative;
 }

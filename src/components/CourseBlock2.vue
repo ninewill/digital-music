@@ -38,6 +38,9 @@
             <img src="@/assets/images/newpic/s4_p2_06.png" alt="圖片" />
           </div>
         </div>
+				<div class="page-p">
+          <img class="" src="@/assets/images/newpic/s4_PAGE.svg" alt="圖片" />
+        </div>
         <div class="swiper-pagination swiper-pagination-swiper"></div>
       </div>
       <div class="swiper-button-next arrow-btn-next4"></div>

@@ -38,7 +38,10 @@
             <img src="@/assets/images/newpic/s4_p1_06.png" alt="圖片" />
           </div>
         </div>
-				<div class="swiper-pagination swiper-pagination-swiper"></div>
+        <div class="page-p">
+          <img class="" src="@/assets/images/newpic/s4_PAGE.svg" alt="圖片" />
+        </div>
+        <div class="swiper-pagination swiper-pagination-swiper"></div>
       </div>
       <div class="swiper-button-next arrow-btn-next3"></div>
       <div class="swiper-button-prev arrow-btn-prev3"></div>
@@ -73,7 +76,7 @@ export default {
           slidesPerView: 3,
         },
       },
-			pagination: {
+      pagination: {
         el: ".mySwiper-part1 .swiper-pagination",
         clickable: true,
       },
@@ -164,7 +167,7 @@ export default {
   &::after {
     content: "";
     display: block;
-    width: 95%;
+    width: 98%;
     height: 300px;
     margin: 0 auto;
     border: 1px solid $color-primary-1;
@@ -231,7 +234,7 @@ export default {
   position: absolute;
   bottom: -35px;
   left: 50%;
-	z-index: 10;
+  z-index: 10;
   margin-left: -143.04px;
 
   @include min-width(768px) {
@@ -270,6 +273,4 @@ export default {
     }
   }
 }
-
-
 </style>

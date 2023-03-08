@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="s-title s4-title">
-      <h2 class="h2">STUDENT WORKS</h2>
-    </div>
     <div class="s-content s4-content">
       <FormSingle />
     </div>
@@ -78,18 +75,6 @@ export default {
     width: 539px;
     height: 79px;
     top: -15%;
-  }
-
-  .h2 {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: url("@/assets/images/pic/pic_07_DREAMON.svg") no-repeat
-      center/contain;
-    @include hidetext;
   }
 }
 
