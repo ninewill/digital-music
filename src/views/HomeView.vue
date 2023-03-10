@@ -27,8 +27,12 @@
     <section class="section-block section4">
       <Salary />
     </section>
+		 <!--BEST CHOICE-->
+		 <section class="section-block section5">
+      <BestChoice />
+    </section>
 		<!--Dream OnBlock-->
-    <section class="section-block section5">
+    <section class="section-block section6">
       <DreamOnBlock />
     </section>
     <div class="music-bar">
@@ -43,7 +47,7 @@
       </div>
     </div>
     <!--WITNESS-->
-    <section class="witness-block section6">
+    <section class="witness-block section7">
       <Witness />
     </section>
   </div>
@@ -58,6 +62,7 @@ import CourseBlock2 from "@/components/CourseBlock2.vue";
 import TrainingCenter from "@/components/TrainingCenter.vue";
 import TrainingCenterBar from "@/components/TrainingCenterBar.vue";
 import Salary from "@/components/Salary.vue";
+import BestChoice from "@/components/BestChoice.vue";
 import DreamOnBlock from "@/components/DreamOnBlock.vue";
 import DreamOnBlock_1 from "@/components/DreamOnBlock-1.vue";
 import DreamOnBlock_2 from "@/components/DreamOnBlock-2.vue";
@@ -74,6 +79,7 @@ export default {
     TrainingCenter,
 		TrainingCenterBar,
 		Salary,
+		BestChoice,
     DreamOnBlock,
     DreamOnBlock_1,
     DreamOnBlock_2,
@@ -267,7 +273,17 @@ export default {
 }
 
 .section5 {
-  margin-top: 12rem;
+  margin-top: 20rem;
+  position: relative;
+}
+
+.section6 {
+  margin-top: 10rem;
+  position: relative;
+}
+
+.section7 {
+  margin-top: 10rem;
   position: relative;
 }
 
