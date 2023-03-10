@@ -2,7 +2,7 @@
   <div class="cd-popup2" role="alert">
     <div class="cd-popup-container">
 			<div class="cd-main">
-				<img src="@/assets/images/newpic/影像聲音後製.jpg" />
+				<img src="@/assets/images/newpic/影像聲音後製.svg" />
 			</div>
       <a
         href="javascript:;"

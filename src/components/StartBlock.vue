@@ -182,19 +182,19 @@ export default {};
     font-size: 28px;
     color: $color-primary-1;
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -35px;
-      left: 50%;
-      margin-left: -131px;
-      width: 262px;
-      height: 48px;
-      background: url("@/assets/images/newpic/s2_title.png") no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-    }
+    //&::after {
+    //  content: "";
+    //  display: block;
+    //  position: absolute;
+    //  top: -35px;
+    //  left: 50%;
+    //  margin-left: -131px;
+    //  width: 262px;
+    //  height: 48px;
+    //  background: url("@/assets/images/newpic/s2_title.png") no-repeat;
+    //  background-size: contain;
+    //  background-position: 50% 50%;
+    //}
   }
 
   > .s1-description {
@@ -249,12 +249,6 @@ export default {};
   display: flex;
   flex-direction: column;
 
-  @include min-width(768px) {
-  }
-
-  @include min-width(1025px) {
-  }
-
   &:before {
     content: "";
 		position: absolute;
@@ -279,20 +273,6 @@ export default {};
     font-weight: 700;
     font-size: 28px;
     color: $color-primary-1;
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -35px;
-      left: 50%;
-      margin-left: -131px;
-      width: 262px;
-      height: 48px;
-      background: url("@/assets/images/newpic/s3_title.png") no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-    }
   }
   > .s1-description {
     margin-top: 1.5rem;

@@ -12,22 +12,40 @@
       </div>
       <div class="salary-wrap">
         <div class="salary-info">
-					<div class="h4">數位成音業界基本薪資分布</div>
-					<p>隨著數位化的浪潮，數位成音是現代具影響力的新趨勢，音樂產業或成千上萬大產業，音效、配樂、配音、混音、微電影皆無處不在，人們獲取信息的渠道與方式從未停止變化，掌握數位成音技能，既可獨自承接專案項目也可邁向就業道路，實現更多在工作上的自主權！</p>
-				</div>
-        <div class="salary-chart-bar"></div>
+          <div class="h4">數位成音業界基本薪資分布</div>
+          <p>
+            隨著數位化的浪潮，數位成音是現代具影響力的新趨勢，音樂產業或成千上萬大產業，音效、配樂、配音、混音、微電影皆無處不在，人們獲取信息的渠道與方式從未停止變化，掌握數位成音技能，既可獨自承接專案項目也可邁向就業道路，實現更多在工作上的自主權！
+          </p>
+        </div>
+        <div class="salary-chart-bar">
+          <Chart />
+          <ul class="salary-num">
+            <li>$42,000~</li>
+            <li>$35,000~</li>
+            <li>$35,000~</li>
+            <li>$35,000~</li>
+            <li>$30,000~</li>
+            <li>$10,000~</li>
+            <li>$5,000~</li>
+            <li>$3,000~</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Chart from "@/components/Chart.vue";
+
 export default {
-  components: {},
+  components: {
+    Chart,
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/scss/mixin.scss";
 @import "@/assets/scss/variables.scss";
 @import "@/assets/scss/reset.scss";
@@ -133,47 +151,94 @@ export default {
   }
 }
 
-.salary-chart{
-	.salary-title{
-		position: relative;
-		margin-top: 5rem;
-		padding: 0 5rem;
-		display: flex;
-		align-items: center;
+.salary-chart {
 
-		&::after{
-			content: "";
-			display: block;
-			position: absolute;
-			right: 0;
-			width: 60%;
-			border: 1px dashed $color-primary-1;
-		}
-	}
+	&::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+			bottom: -100px;
+      width: 95%;
+      border: 1px dashed $color-primary-1;
+    }
+  .salary-title {
+    position: relative;
+    margin-top: 5rem;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 60%;
+      border: 1px dashed $color-primary-1;
+    }
+  }
 }
 
-.salary-wrap{
-	margin-top: 5rem;
-	padding: 0 5rem;
+.salary-wrap {
+  margin-top: 5rem;
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-between;
 
-	.salary-info{
-		width: 35%;
-		padding: 2.5rem;
-		border: 1px solid $color-primary-1;
-		border-radius: 20px;
+  .salary-info {
+    width: 35%;
+    padding: 2.5rem;
+    border: 1px solid $color-primary-1;
+    border-radius: 20px;
 
-		>.h4{
-			color: $color-primary-1;
-			font-size: 1.2vw;
-		}
+    > .h4 {
+      color: $color-primary-1;
+      font-size: 1.2vw;
+    }
 
-		>p{
-			margin-top: 1rem;
-			margin-bottom: 0;
-			line-height: 2em;
-			color: $color-white;
-			font-size: 0.9vw;
-		}
-	}
+    > p {
+      margin-top: 1rem;
+      margin-bottom: 0;
+      line-height: 2em;
+      color: $color-white;
+      font-size: 0.9vw;
+    }
+  }
+
+  .salary-chart-bar {
+    width: 60%;
+    position: relative;
+
+    .salary-num {
+      margin-top: 1rem;
+      position: absolute;
+      top: 0;
+      right: -50px;
+
+      > li {
+        margin-top: 1.3rem;
+        color: $color-primary-1;
+        font-size: 0.9vw;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        @include min-width(1025px) {
+					font-size: 1.2vw;
+        }
+
+        @include min-width(1440px) {
+          margin-top: 1rem;
+					font-size: 0.9vw;
+        }
+
+        @include min-width(1920px) {
+          margin-top: 1.3rem;
+        }
+      }
+    }
+  }
 }
 </style>

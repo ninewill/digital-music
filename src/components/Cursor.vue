@@ -62,7 +62,7 @@ export default {
   height: 100%;
   fill: $color-primary-1;
   pointer-events: none;
-  z-index: 100;
+  z-index: 100000;
 }
 
 #ball {
