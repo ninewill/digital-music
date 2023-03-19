@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import Chart from "@/components/Chart.vue";
+import Chart from '@/components/Chart.vue';
 
 export default {
   components: {
@@ -46,10 +46,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-@import "@/assets/scss/animate.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/animate.scss';
 
 .s1-content-title-2 {
   width: 870px;
@@ -61,14 +61,14 @@ export default {
   flex-direction: column;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -120px;
     left: -280px;
     width: 192px;
     height: 192px;
     display: block;
-    background: url("@/assets/images/newpic/s6_bg_deco.png") no-repeat;
+    background: url('@/assets/images/newpic/s6_bg_deco.png') no-repeat;
     background-size: contain;
     background-position: 50% 50%;
   }
@@ -86,7 +86,7 @@ export default {
     color: $color-primary-1;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: -35px;
@@ -94,20 +94,20 @@ export default {
       margin-left: -131px;
       width: 262px;
       height: 48px;
-      background: url("@/assets/images/newpic/s6_title.png") no-repeat;
+      background: url('@/assets/images/newpic/s6_title.png') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 50px;
       right: -20%;
       width: 124px;
       height: 140px;
-      background: url("@/assets/images/newpic/s6_note.png") no-repeat;
+      background: url('@/assets/images/newpic/s6_note.png') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
       animation: musicBounce 2.8s ease-in-out infinite;
@@ -121,7 +121,7 @@ export default {
     color: $color-white;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -129,13 +129,13 @@ export default {
       left: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
     }
 
     &:before {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -143,7 +143,7 @@ export default {
       right: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
       transform: scaleX(-1);
@@ -152,16 +152,15 @@ export default {
 }
 
 .salary-chart {
-
-	&::after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-			bottom: -100px;
-      width: 95%;
-      border: 1px dashed $color-primary-1;
-    }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 95%;
+    border: 1px dashed $color-primary-1;
+  }
   .salary-title {
     position: relative;
     margin-top: 5rem;
@@ -170,7 +169,7 @@ export default {
     align-items: center;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       right: 0;
@@ -191,6 +190,19 @@ export default {
     padding: 2.5rem;
     border: 1px solid $color-primary-1;
     border-radius: 20px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 73px;
+      height: 73px;
+      position: absolute;
+      top: -35px;
+      left: -35px;
+      display: block;
+      background: url('@/assets/images/newpic/s6_star.png') no-repeat
+        center/contain;
+    }
 
     > .h4 {
       color: $color-primary-1;
@@ -226,12 +238,12 @@ export default {
         }
 
         @include min-width(1025px) {
-					font-size: 1.2vw;
+          font-size: 1.2vw;
         }
 
         @include min-width(1440px) {
           margin-top: 1rem;
-					font-size: 0.9vw;
+          font-size: 0.9vw;
         }
 
         @include min-width(1920px) {

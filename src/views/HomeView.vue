@@ -33,9 +33,9 @@
     </section>
     <!--BONUS Bar-->
     <div class="bonus-bar"></div>
-    <!--Dream OnBlock-->
+    <!--BonusBlock-->
     <section class="section-block section6">
-      <DreamOnBlock />
+      <BonusBlock />
     </section>
     <div class="music-bar">
       MUSIC IS A KIND OF POWER · MUSIC IS A KIND OF POWER
@@ -65,7 +65,7 @@ import TrainingCenter from '@/components/TrainingCenter.vue';
 import TrainingCenterBar from '@/components/TrainingCenterBar.vue';
 import Salary from '@/components/Salary.vue';
 import BestChoice from '@/components/BestChoice.vue';
-import DreamOnBlock from '@/components/DreamOnBlock.vue';
+import BonusBlock from '@/components/BonusBlock.vue';
 import DreamOnBlock_1 from '@/components/DreamOnBlock-1.vue';
 import DreamOnBlock_2 from '@/components/DreamOnBlock-2.vue';
 import Witness from '@/components/Witness.vue';
@@ -82,7 +82,7 @@ export default {
     TrainingCenterBar,
     Salary,
     BestChoice,
-    DreamOnBlock,
+    BonusBlock,
     DreamOnBlock_1,
     DreamOnBlock_2,
     Witness,
@@ -278,12 +278,12 @@ export default {
 }
 
 .section6 {
-  margin-top: 10rem;
+  margin-top: 15rem;
   position: relative;
 }
 
 .section7 {
-  margin-top: 10rem;
+  margin-top: 15rem;
   position: relative;
 }
 

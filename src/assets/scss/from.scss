@@ -157,17 +157,17 @@ input:focus {
       line-height: 50px;
       background: #f5f5f5;
       //border-radius: 10px;
-      color: #9e9e9e;
+      color: #fff;
       font-size: 16px;
       transition-duration: 0.3s;
 
       &:hover {
-        color: #757575;
+        color: #fff;
       }
     }
 
     .fieldset-input::placeholder {
-      color: #9e9e9e;
+      color: #fff;
     }
 
     .fieldset-input {
@@ -176,11 +176,12 @@ input:focus {
       padding: 0 12.5px;
       display: block;
       line-height: 50px;
-      background: #f5f5f5;
+      background: transparent;
       border-radius: 0px;
       font-size: 16px;
       transition-duration: 0.3s;
-      border: none;
+      border: 1px solid $color-primary-1;
+      color: #fff;
 
       @include min-width(1025px) {
         height: 40px;
@@ -191,13 +192,13 @@ input:focus {
       }
 
       &::placeholder {
-        color: #aaa;
+        color: #fff;
         transition-duration: 0.3s;
       }
 
       &:hover {
         &::placeholder {
-          color: #757575;
+          color: #fff;
         }
       }
 
@@ -294,10 +295,10 @@ input:focus {
       font-size: 16px;
       display: block;
       line-height: 40px;
-      color: #aaa;
-      background-color: #f5f5f5;
+      color: #fff;
+      background-color: transparent;
       margin-right: 8px;
-      border: none;
+      border: 1px solid $color-primary-1;
 
       /*移除箭頭樣式*/
       appearance: none;
@@ -372,12 +373,7 @@ input:focus {
       display: inline-block;
 			margin-top: 3rem;
       padding: 0.1rem;
-      border: 1px solid transparent;
       border-radius: 15px;
-      background-image: linear-gradient($color-black, $color-black),
-        linear-gradient(to right, #fff176, #00e0b8);
-      background-origin: border-box;
-      background-clip: content-box, border-box;
       cursor: pointer;
 
       @include min-width(1025px) {
@@ -393,9 +389,8 @@ input:focus {
       margin: 0 auto;
       display: block;
       padding: 10px 56px;
-      background: linear-gradient(137.1deg, #fff176 14.56%, #00e0b8 85.34%);
-      background-clip: text;
-      color: transparent;
+      background: #ff8e30;
+      color: $color-white;
       font-size: 16px;
       border-radius: 5px;
       border: none;
@@ -506,7 +501,7 @@ input:focus {
     opacity: 1;
 
     &.swiper-pagination-bullet-active {
-      background: linear-gradient(137.1deg, #fff176 14.56%, #00e0b8 85.34%);
+      background: $color-primary-1;
     }
   }
 }

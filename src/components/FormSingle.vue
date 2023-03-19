@@ -7,28 +7,28 @@
         <div class="cd-popup-container-left-bottom">
           <div class="swiper popup-swiper-form">
             <div class="swiper-tag">
-              <img src="@/assets/images/pic/pic_07_subtitle.svg" alt="圖片" />
+              <img src="@/assets/images/newpic/s8_title01.svg" alt="圖片" />
             </div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="main-banner">
-                  <img src="@/assets/images/pic/pic_07-1_p1.svg" alt="圖片" />
+                  <img src="@/assets/images/newpic/s8_icon01.svg" alt="圖片" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="main-banner">
-                  <img src="@/assets/images/pic/pic_07-1_p2.svg" alt="圖片" />
+                  <img src="@/assets/images/newpic/s8_icon02.svg" alt="圖片" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="main-banner">
-                  <img src="@/assets/images/pic/pic_07-1_p3.svg" alt="圖片" />
+                  <img src="@/assets/images/newpic/s8_icon03.svg" alt="圖片" />
                 </div>
               </div>
             </div>
             <div class="swiper-border swiper-border-l"></div>
             <div class="swiper-border swiper-border-r"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination pagination-form"></div>
             <div class="swiper-button-next next"></div>
             <div class="swiper-button-prev prev"></div>
           </div>
@@ -38,7 +38,8 @@
       <div id="4" class="cd-popup-container-right">
         <div class="cd-popup-container-right-top">
           <div class="top-img">
-            <img src="@/assets/images/pic/pic_07-3_title.svg" alt="圖片" />
+            <div class="h3">領取免費課程卷</div>
+            <!-- <img src="@/assets/images/pic/pic_07-3_title.svg" alt="圖片" /> -->
           </div>
           <span>每日限量20名免費索取</span>
         </div>
@@ -160,7 +161,7 @@
                   <textarea
                     id="message_area"
                     class="fieldset-input"
-                    placeholder="想詢問音樂製作相關問題..."
+                    placeholder="想詢問音樂相關問題..."
                     name="message_area"
                     tabindex="10"
                   ></textarea>
@@ -213,30 +214,30 @@ export default {
   mounted() {
     $(document).ready(function () {
       var GET_LOCATION_ENDPOINT =
-        "https://www.appedu.com.tw/Librarys/_ajax/Address.php";
+        'https://www.appedu.com.tw/Librarys/_ajax/Address.php';
       var DISTRIBUTION_ENDPOINT =
-        "https://www.appedu.com.tw/Librarys/_ajax/Distribution.php";
+        'https://www.appedu.com.tw/Librarys/_ajax/Distribution.php';
 
       function loadLocation(options) {
         var $cityElement = options.city.element;
         var $areaElement = options.area.element;
         $cityElement.html(
-          $("<option>").text(options.city.defaultLabel).val("")
+          $('<option>').text(options.city.defaultLabel).val('')
         );
         $areaElement.html(
-          $("<option>").text(options.area.defaultLabel).val("")
+          $('<option>').text(options.area.defaultLabel).val('')
         );
         // load city data
         $.ajax({
           url: GET_LOCATION_ENDPOINT,
-          type: "POST",
-          dataType: "json",
-          data: { postFlag: "LoadCity" },
+          type: 'POST',
+          dataType: 'json',
+          data: { postFlag: 'LoadCity' },
         })
           .done(function (response) {
-            if (response.result == "true") {
+            if (response.result == 'true') {
               response.data.forEach(function (v) {
-                $cityElement.append($("<option>").val(v.id).text(v.name));
+                $cityElement.append($('<option>').val(v.id).text(v.name));
               });
             }
           })
@@ -246,21 +247,21 @@ export default {
         // listen to city and load area data
         $cityElement.change(function () {
           $areaElement.html(
-            $("<option>").text(options.area.defaultLabel).val("")
+            $('<option>').text(options.area.defaultLabel).val('')
           );
           $.ajax({
             url: GET_LOCATION_ENDPOINT,
-            type: "POST",
-            dataType: "json",
+            type: 'POST',
+            dataType: 'json',
             data: {
-              postFlag: "LoadArea",
+              postFlag: 'LoadArea',
               CityID: $(this).val(),
             },
           })
             .done(function (response) {
-              if (response.result == "true") {
+              if (response.result == 'true') {
                 response.data.forEach(function (v) {
-                  $areaElement.append($("<option>").val(v.id).text(v.name));
+                  $areaElement.append($('<option>').val(v.id).text(v.name));
                 });
               }
             })
@@ -271,12 +272,12 @@ export default {
       }
 
       $.validator.addMethod(
-        "cellphone",
+        'cellphone',
         function (value, element) {
           var reg = /^[09]{2}[0-9]{8}$/;
           return this.optional(element) || reg.test(value);
         },
-        "Please enter a valid cellphone."
+        'Please enter a valid cellphone.'
       );
 
       /*
@@ -301,20 +302,20 @@ distributionSubmitHandler(function(response){
 */
       function distributionSubmitHandler(options) {
         return function (form) {
-          let $checkbox = $(".styled-checkbox:checked");
-          let $message_area = $("#message_area");
+          let $checkbox = $('.styled-checkbox:checked');
+          let $message_area = $('#message_area');
           let remark_text =
-            "我是：" +
-            $checkbox.data("value") +
-            "，" +
-            "我想詢問：" +
+            '我是：' +
+            $checkbox.data('value') +
+            '，' +
+            '我想詢問：' +
             $message_area.val();
           $.ajax({
             url: DISTRIBUTION_ENDPOINT,
-            type: "POST",
-            dataType: "json",
+            type: 'POST',
+            dataType: 'json',
             data: {
-              postFlag: "InsertData",
+              postFlag: 'InsertData',
               distribution_id: form.distribution.value,
               media_sub_id: form.mediaSub.value,
               outlet_sub_id: form.outletSub.value,
@@ -327,11 +328,11 @@ distributionSubmitHandler(function(response){
               remark: remark_text,
               gift: form.gift && form.gift.value,
               sms_id: 29,
-              mail_id: $checkbox.data("mail_id"),
+              mail_id: $checkbox.data('mail_id'),
             },
           })
             .done(function (response) {
-              if (typeof options == "function") {
+              if (typeof options == 'function') {
                 return options(response);
               }
               var opt = { success: null, error: null };
@@ -345,41 +346,41 @@ distributionSubmitHandler(function(response){
                 options.success = options.successMessage;
                 // 舊版 errorMessage 根本沒用到，不覆蓋以維持舊頁面原樣
               }
-              if (response.result == "true") {
-                if (typeof options.success == "function") {
+              if (response.result == 'true') {
+                if (typeof options.success == 'function') {
                   return options.success(response);
                 } else {
                   alert(options.success);
                   top.location.href =
-                    "https://www.appedu.com.tw/Event/musicproduction-series/";
+                    'https://www.appedu.com.tw/Event/musicproduction-series/';
                 }
               } else {
-                if (typeof options.error == "function") {
+                if (typeof options.error == 'function') {
                   return options.error(response);
                 } else {
-                  alert("資料送出失敗，請聯絡我們或再試一次");
+                  alert('資料送出失敗，請聯絡我們或再試一次');
                 }
               }
             })
             .fail(function (error) {
               console.error(error);
-              alert("網路問題無法傳送資料，請聯絡我們或再試一次");
+              alert('網路問題無法傳送資料，請聯絡我們或再試一次');
             });
           return false;
         };
       }
 
-      var $form = $("form.form-distribution");
+      var $form = $('form.form-distribution');
       loadLocation({
         city: {
-          element: $form.find("[name=city]"),
-          defaultLabel: "請選縣市",
-          errorMessage: "無法載入縣市資料",
+          element: $form.find('[name=city]'),
+          defaultLabel: '請選縣市',
+          errorMessage: '無法載入縣市資料',
         },
         area: {
-          element: $form.find("[name=area]"),
-          defaultLabel: "請選地區",
-          errorMessage: "無法載入地區資料",
+          element: $form.find('[name=area]'),
+          defaultLabel: '請選地區',
+          errorMessage: '無法載入地區資料',
         },
       });
 
@@ -390,46 +391,46 @@ distributionSubmitHandler(function(response){
         .validate({
           // debug: true,
           submitHandler: distributionSubmitHandler({
-            successMessage: "資料已送出，將安排專人與您聯絡",
-            errorMessage: "您輸入的資料有誤或者已輸入過相同資料",
+            successMessage: '資料已送出，將安排專人與您聯絡',
+            errorMessage: '您輸入的資料有誤或者已輸入過相同資料',
           }),
           rules: {
-            name: "required",
+            name: 'required',
             email: { required: true, email: true },
             cellphone: { required: true, cellphone: true },
-            city: "required",
-            area: "required",
-            remark: "required",
-            course: "required",
-            agreement: "required",
+            city: 'required',
+            area: 'required',
+            remark: 'required',
+            course: 'required',
+            agreement: 'required',
           },
           messages: {
-            name: "請輸入您的姓名",
+            name: '請輸入您的姓名',
             email: {
-              required: "請輸入您的E-mail信箱",
-              email: "請輸入有效的E-mail信箱",
+              required: '請輸入您的E-mail信箱',
+              email: '請輸入有效的E-mail信箱',
             },
             cellphone: {
-              required: "請輸入您的聯絡電話",
-              cellphone: "請輸入有效的聯絡電話",
+              required: '請輸入您的聯絡電話',
+              cellphone: '請輸入有效的聯絡電話',
             },
-            city: "請選擇居住縣市與地區",
-            area: "請選擇居住縣市與地區",
-            remark: "",
-            course: "請選擇想學課程",
-            agreement: "您尚未接受隱私權使用條款",
+            city: '請選擇居住縣市與地區',
+            area: '請選擇居住縣市與地區',
+            remark: '',
+            course: '請選擇想學課程',
+            agreement: '您尚未接受隱私權使用條款',
           },
         });
     });
 
-    var swiper3 = new Swiper(".popup-swiper-form", {
+    var swiper3 = new Swiper('.popup-swiper-form', {
       pagination: {
-        el: ".popup-swiper-form .swiper-pagination",
+        el: '.popup-swiper-form .swiper-pagination',
         clickable: true,
       },
       navigation: {
-        nextEl: ".next",
-        prevEl: ".prev",
+        nextEl: '.next',
+        prevEl: '.prev',
       },
     });
   },
@@ -437,10 +438,19 @@ distributionSubmitHandler(function(response){
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/from-option.scss";
-@import "@/assets/scss/from.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/from-option.scss';
+@import '@/assets/scss/from.scss';
+
+.popup-swiper-form {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-form {
+  left: auto !important;
+}
 
 .cd-popup-container-left {
   position: relative;
@@ -468,7 +478,7 @@ distributionSubmitHandler(function(response){
     width: 100%;
     padding-bottom: 29.32%;
     z-index: 10;
-    background: url("@/assets/images/pic/mobile/pic_07_title07.svg") no-repeat;
+    background: url('@/assets/images/newpic/s8_BONUS.svg') no-repeat;
     background-size: contain;
     background-position: 0 100%;
 
@@ -484,11 +494,37 @@ distributionSubmitHandler(function(response){
       top: 0;
       width: 100%;
       margin-top: 5%;
-      margin-left: -3rem;
-      padding-bottom: 25.34%;
-      background: url("@/assets/images/pic/pic_07_title.svg") no-repeat;
+      margin-left: 0rem;
+      padding-bottom: 12%;
+      background: url('@/assets/images/newpic/s8_BONUS.svg') no-repeat;
       background-size: contain;
       background-position: 0 100%;
+      z-index: 10;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -100px;
+        top: -200px;
+        width: 203px;
+        height: 212px;
+        z-index: 0;
+        background: url('@/assets/images/newpic/s8_bg_deco.png') no-repeat;
+        background-size: contain;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -95px;
+        width: 241px;
+        height: 211px;
+        background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
+        background-size: contain;
+      }
     }
 
     @include min-width(1280px) {
@@ -496,10 +532,6 @@ distributionSubmitHandler(function(response){
     }
 
     @include min-width(1440px) {
-      margin-top: 7%;
-    }
-
-    @include min-width(1920px) {
       margin-top: 5%;
     }
   }
@@ -511,9 +543,28 @@ distributionSubmitHandler(function(response){
   position: relative;
 
   .top-img {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 2rem;
+
+    > .h3 {
+      display: block;
+      font-weight: 500;
+      font-size: 32px;
+      color: $color-primary-1;
+
+      @include min-width(1024px) {
+        font-size: 32px;
+      }
+
+      @include min-width(1440px) {
+        font-size: 1.8vw;
+      }
+
+      @include min-width(1920px) {
+        font-size: 1.5vw;
+      }
+    }
 
     > img {
       width: 100%;
@@ -529,14 +580,14 @@ distributionSubmitHandler(function(response){
   }
 
   &::after {
-    content: "";
-    width: 91px;
-    height: 146px;
+    content: '';
+    width: 115px;
+    height: 115px;
     position: absolute;
-    top: -100px;
-    right: 0;
+    top: -90px;
+    right: -60px;
     display: block;
-    background: url("@/assets/images/pic/pic_07-2_note.svg") no-repeat
+    background: url('@/assets/images/newpic/s8_star.png') no-repeat
       center/contain;
   }
 }
@@ -551,7 +602,7 @@ distributionSubmitHandler(function(response){
   border: 1px solid transparent;
   border-radius: 25px;
   background-image: linear-gradient($color-black, $color-black),
-    linear-gradient(to right, #fff176, #00e0b8);
+    linear-gradient(to bottom, #fff, #ff8e30);
   background-origin: border-box;
   background-clip: content-box, border-box;
 
@@ -595,7 +646,7 @@ distributionSubmitHandler(function(response){
     margin-top: -280px;
     width: 100%;
     padding-bottom: 83.11%;
-    background: url("@/assets/images/pic/pic_07-4_bg.png") no-repeat
+    background: url('@/assets/images/pic/pic_07-4_bg.png') no-repeat
       center/contain;
   }
 
@@ -662,12 +713,12 @@ distributionSubmitHandler(function(response){
   font-size: 12px;
   line-height: 16.8px;
   color: $color-white;
-	text-align: center;
+  text-align: center;
 
-	@include min-width(768px) {
-		padding: 0 4rem;
-		text-align: left;
-	}
+  @include min-width(768px) {
+    padding: 0 4rem;
+    text-align: left;
+  }
 
   @include min-width(1440px) {
     padding: 0 2rem;
@@ -686,9 +737,9 @@ distributionSubmitHandler(function(response){
     width: 100%;
   }
 
-	@include min-width(768px) {
-		width: 20%;
-	}
+  @include min-width(768px) {
+    width: 20%;
+  }
 
   @include min-width(1025px) {
     position: absolute;
@@ -775,6 +826,26 @@ distributionSubmitHandler(function(response){
   @include min-width(1440px) {
     margin-top: -50px !important;
     left: 100px !important;
+  }
+}
+
+.main-banner {
+  width: 50%;
+
+  @include min-width(1024px) {
+    width: 40%;
+  }
+
+  @include min-width(1440px) {
+    width: 50%;
+  }
+
+  @include min-width(1920px) {
+    width: 40%;
+  }
+
+  > img {
+    width: 100%;
   }
 }
 </style>
