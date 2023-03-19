@@ -16,21 +16,21 @@
       </li>
       <li>
         <div class="s5-img-2">
-          <img src="@/assets/images/newpic/s7_p1.png" alt="圖片" />
+          <img src="@/assets/images/newpic/s7_p2.png" alt="圖片" />
         </div>
         <div class="h3">動畫配音工作室</div>
         <p>體驗動畫配音，專業業師傳授 實戰經驗。</p>
       </li>
       <li>
         <div class="s5-img-3">
-          <img src="@/assets/images/newpic/s7_p1.png" alt="圖片" />
+          <img src="@/assets/images/newpic/s7_p3.png" alt="圖片" />
         </div>
         <div class="h3">知名業師引薦</div>
         <p>業界知名配音員、混音師、錄音師，引薦公司接案管道。</p>
       </li>
       <li>
         <div class="s5-img-4">
-          <img src="@/assets/images/newpic/s7_p1.png" alt="圖片" />
+          <img src="@/assets/images/newpic/s7_p4.png" alt="圖片" />
         </div>
         <div class="h3">教學品質保證</div>
         <p>全方位專業課程教學，最高規格 電腦設備教室。</p>
@@ -50,10 +50,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-@import "@/assets/scss/animate.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/animate.scss';
 
 .s1-content-title-2 {
   width: 870px;
@@ -65,14 +65,14 @@ export default {
   flex-direction: column;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -120px;
     left: -500px;
     width: 316px;
     height: 360px;
     display: block;
-    background: url("@/assets/images/newpic/s7_bg_deco.png") no-repeat;
+    background: url('@/assets/images/newpic/s7_bg_deco.png') no-repeat;
     background-size: contain;
     background-position: 50% 50%;
   }
@@ -90,7 +90,7 @@ export default {
     color: $color-primary-1;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: -35px;
@@ -98,7 +98,7 @@ export default {
       margin-left: -131px;
       width: 262px;
       height: 48px;
-      background: url("@/assets/images/newpic/s6_title.png") no-repeat;
+      background: url('@/assets/images/newpic/s7_title.png') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
     }
@@ -111,7 +111,7 @@ export default {
     color: $color-white;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -119,13 +119,13 @@ export default {
       left: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
     }
 
     &:before {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -133,7 +133,7 @@ export default {
       right: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
       transform: scaleX(-1);
@@ -148,6 +148,53 @@ export default {
 
   > li {
     width: 24%;
+
+    > .h3 {
+      margin-top: 25px;
+      font-weight: 500;
+      font-size: 26px;
+      color: $color-primary-1;
+
+      @include min-width(1024px) {
+        font-size: 1.8vw;
+      }
+
+      @include min-width(1280px) {
+        font-size: 1.6vw;
+      }
+
+      @include min-width(1440px) {
+        font-size: 1.5vw;
+      }
+
+      @include min-width(1920px) {
+        font-size: 1.2vw;
+      }
+    }
+
+    > p {
+      margin-top: 25px;
+      line-height: 1.5em;
+      font-size: 1rem;
+      color: $color-white;
+
+      @include min-width(1024px) {
+        font-size: 1.3vw;
+      }
+
+
+      @include min-width(1280px) {
+        font-size: 1vw;
+      }
+
+      @include min-width(1440px) {
+        font-size: 0.9vw;
+      }
+
+      @include min-width(1920px) {
+        font-size: 0.8vw;
+      }
+    }
 
     img {
       width: 100%;

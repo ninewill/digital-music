@@ -20,18 +20,20 @@
     <section class="section-block section3">
       <TrainingCenter />
     </section>
-		<div class="tc-bar">
+    <div class="tc-bar">
       <TrainingCenterBar />
     </div>
     <!--SALARY-->
     <section class="section-block section4">
       <Salary />
     </section>
-		 <!--BEST CHOICE-->
-		 <section class="section-block section5">
+    <!--BEST CHOICE-->
+    <section class="section-block section5">
       <BestChoice />
     </section>
-		<!--Dream OnBlock-->
+    <!--BONUS Bar-->
+    <div class="bonus-bar"></div>
+    <!--Dream OnBlock-->
     <section class="section-block section6">
       <DreamOnBlock />
     </section>
@@ -51,24 +53,24 @@
       <Witness />
     </section>
   </div>
-	<Cursor />
+  <Cursor />
 </template>
 
 <script>
-import IndexBlock from "@/components/IndexBlock.vue";
-import StartBlock from "@/components/StartBlock.vue";
-import CourseBlock from "@/components/CourseBlock.vue";
-import CourseBlock2 from "@/components/CourseBlock2.vue";
-import TrainingCenter from "@/components/TrainingCenter.vue";
-import TrainingCenterBar from "@/components/TrainingCenterBar.vue";
-import Salary from "@/components/Salary.vue";
-import BestChoice from "@/components/BestChoice.vue";
-import DreamOnBlock from "@/components/DreamOnBlock.vue";
-import DreamOnBlock_1 from "@/components/DreamOnBlock-1.vue";
-import DreamOnBlock_2 from "@/components/DreamOnBlock-2.vue";
-import Witness from "@/components/Witness.vue";
-import Swiper from "@/components/Swiper.vue";
-import Cursor from "@/components/Cursor.vue";
+import IndexBlock from '@/components/IndexBlock.vue';
+import StartBlock from '@/components/StartBlock.vue';
+import CourseBlock from '@/components/CourseBlock.vue';
+import CourseBlock2 from '@/components/CourseBlock2.vue';
+import TrainingCenter from '@/components/TrainingCenter.vue';
+import TrainingCenterBar from '@/components/TrainingCenterBar.vue';
+import Salary from '@/components/Salary.vue';
+import BestChoice from '@/components/BestChoice.vue';
+import DreamOnBlock from '@/components/DreamOnBlock.vue';
+import DreamOnBlock_1 from '@/components/DreamOnBlock-1.vue';
+import DreamOnBlock_2 from '@/components/DreamOnBlock-2.vue';
+import Witness from '@/components/Witness.vue';
+import Swiper from '@/components/Swiper.vue';
+import Cursor from '@/components/Cursor.vue';
 
 export default {
   components: {
@@ -77,26 +79,24 @@ export default {
     CourseBlock,
     CourseBlock2,
     TrainingCenter,
-		TrainingCenterBar,
-		Salary,
-		BestChoice,
+    TrainingCenterBar,
+    Salary,
+    BestChoice,
     DreamOnBlock,
     DreamOnBlock_1,
     DreamOnBlock_2,
     Witness,
     Swiper,
-		Cursor,
+    Cursor,
   },
-	mounted() {
-
-	}
+  mounted() {},
 };
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
 
 .section-block {
   width: calc(100% - 40px);
@@ -140,14 +140,14 @@ export default {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     width: 20px;
     height: 436px;
     display: block;
     position: absolute;
     top: 80px;
     right: 0px;
-    background: url("@/assets/images/newpic/s0_deco_text.svg") no-repeat
+    background: url('@/assets/images/newpic/s0_deco_text.svg') no-repeat
       center/cover;
   }
 }
@@ -157,26 +157,26 @@ export default {
 
   @include min-width(1025px) {
     &::before {
-      content: "";
+      content: '';
       width: 147px;
       height: 153px;
       display: block;
       position: absolute;
       top: -50px;
       left: 0;
-      background: url("@/assets/images/newpic/s2_bg_deco01.svg") no-repeat
+      background: url('@/assets/images/newpic/s2_bg_deco01.svg') no-repeat
         center/contain;
     }
 
     &::after {
-      content: "";
+      content: '';
       width: 200px;
       height: 200px;
       display: block;
       position: absolute;
       top: 0px;
       right: 0;
-      background: url("@/assets/images/newpic/s2_bg_deco02.svg") no-repeat
+      background: url('@/assets/images/newpic/s2_bg_deco02.svg') no-repeat
         center/contain;
     }
   }
@@ -199,14 +199,14 @@ export default {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: 200px;
     height: 600px;
     position: absolute;
     top: -200px;
     right: -25%;
-    background: url("@/assets/images/newpic/s4_bg_micro.png") no-repeat
+    background: url('@/assets/images/newpic/s4_bg_micro.png') no-repeat
       center/contain;
   }
 }
@@ -220,7 +220,7 @@ export default {
   }
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 50%;
@@ -273,7 +273,7 @@ export default {
 }
 
 .section5 {
-  margin-top: 20rem;
+  margin-top: 15rem;
   position: relative;
 }
 
@@ -287,10 +287,28 @@ export default {
   position: relative;
 }
 
-.tc-bar{
+.tc-bar {
   padding: 3.75rem 0;
-	border-top: 1px solid $color-primary-1;
-	border-bottom: 1px solid $color-primary-1;
+  border-top: 1px solid $color-primary-1;
+  border-bottom: 1px solid $color-primary-1;
+}
+
+.bonus-bar {
+  margin-top: 5rem;
+  border-top: 1px solid $color-primary-1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 170px;
+    height: 57px;
+    background: url('@/assets/images/newpic/s7_arrow.svg') no-repeat
+      center/contain;
+  }
 }
 
 .music-bar {
