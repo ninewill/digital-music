@@ -37,16 +37,11 @@
     <section class="section-block section6">
       <BonusBlock />
     </section>
-    <div class="music-bar">
-      MUSIC IS A KIND OF POWER · MUSIC IS A KIND OF POWER
-    </div>
-    <div id="3" class="section4-wrapp">
-      <div class="section-block">
-        <DreamOnBlock_1 />
-      </div>
-      <div class="section-block-1">
-        <DreamOnBlock_2 />
-      </div>
+    <!-- BEST COURSE WAVE -->
+    <div class="wave"></div>
+    <!--BEST COURSE-->
+    <div id="3" class="section-block course-block">
+      <BestCourse />
     </div>
     <!--WITNESS-->
     <section class="witness-block section7">
@@ -66,8 +61,7 @@ import TrainingCenterBar from '@/components/TrainingCenterBar.vue';
 import Salary from '@/components/Salary.vue';
 import BestChoice from '@/components/BestChoice.vue';
 import BonusBlock from '@/components/BonusBlock.vue';
-import DreamOnBlock_1 from '@/components/DreamOnBlock-1.vue';
-import DreamOnBlock_2 from '@/components/DreamOnBlock-2.vue';
+import BestCourse from '@/components/BestCourse.vue';
 import Witness from '@/components/Witness.vue';
 import Swiper from '@/components/Swiper.vue';
 import Cursor from '@/components/Cursor.vue';
@@ -83,8 +77,7 @@ export default {
     Salary,
     BestChoice,
     BonusBlock,
-    DreamOnBlock_1,
-    DreamOnBlock_2,
+    BestCourse,
     Witness,
     Swiper,
     Cursor,
@@ -283,7 +276,7 @@ export default {
 }
 
 .section7 {
-  margin-top: 15rem;
+  margin-top: 30rem;
   position: relative;
 }
 
@@ -311,27 +304,36 @@ export default {
   }
 }
 
-.music-bar {
+.course-block {
+  position: relative;
+  // height: 800px;
+}
+
+.wave {
+  width: 100%;
   margin-top: 3rem;
-  padding: 1rem 0;
-  font-weight: 800;
-  font-size: 18px;
-  color: $color-white;
-  text-align: center;
-  background: linear-gradient(137.1deg, #fff176 14.56%, #00e0b8 85.34%);
+  padding-bottom: 42.9%;
+  background: url('@/assets/images/newpic/s9_bg_line.png') no-repeat
+    center/cover;
 
   @include min-width(1025px) {
-    margin-top: 7rem;
-    padding: 2rem 0;
-    font-size: 30px;
+    margin-top: 20rem;
+  }
+
+    @include min-width(1280px) {
+    margin-top: 15rem;
   }
 
   @include min-width(1440px) {
-    font-size: 40px;
+    margin-top: 14rem;
+  }
+
+    @include min-width(1650px) {
+    margin-top: 12rem;
   }
 
   @include min-width(1920px) {
-    font-size: 50px;
+    margin-top: 15rem;
   }
 }
 

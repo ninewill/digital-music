@@ -519,7 +519,7 @@ distributionSubmitHandler(function(response){
         display: block;
         position: absolute;
         right: 0;
-        top: -95px;
+        top: -105px;
         width: 241px;
         height: 211px;
         background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
