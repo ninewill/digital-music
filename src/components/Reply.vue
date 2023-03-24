@@ -157,10 +157,10 @@ export default {
   mounted() {
     var swiper = new Swiper('.mySwiper7', {
       loop: true,
-      // autoplay: {
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
       spaceBetween: 30,
       breakpoints: {
         310: {

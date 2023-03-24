@@ -8,7 +8,9 @@
     </div>
     <div class="salary-chart">
       <div class="salary-title">
-        <img src="@/assets/images/newpic/s6_SALARY.svg" alt="圖片" />
+        <div class="salary-title-img">
+          <img src="@/assets/images/newpic/s6_SALARY.svg" alt="圖片" />
+        </div>
       </div>
       <div class="salary-wrap">
         <div class="salary-info">
@@ -172,6 +174,30 @@ export default {
     display: flex;
     align-items: center;
 
+    .salary-title-img {
+      width: 40%;
+
+      @include min-width(1025px) {
+        width: 40%;
+      }
+
+      @include min-width(1440px) {
+        width: 40%;
+      }
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    @include min-width(1025px) {
+      padding: 0 2rem;
+    }
+
+    @include min-width(1440px) {
+      padding: 0 5rem;
+    }
+
     &::after {
       content: '';
       display: block;
@@ -179,6 +205,14 @@ export default {
       right: 0;
       width: 60%;
       border: 1px dashed $color-primary-1;
+
+      @include min-width(1025px) {
+        width: 50%;
+      }
+
+      @include min-width(1440px) {
+        width: 55%;
+      }
     }
   }
 }
@@ -205,6 +239,14 @@ export default {
     border-radius: 20px;
     position: relative;
 
+    @include min-width(1280px) {
+      padding: 2.5rem 1.5rem;
+    }
+
+    @include min-width(1440px) {
+      padding: 2.5rem;
+    }
+
     &::after {
       content: '';
       width: 73px;
@@ -220,6 +262,22 @@ export default {
     > .h4 {
       color: $color-primary-1;
       font-size: 1.2vw;
+
+      @include min-width(1280px) {
+        font-size: 1.6vw;
+      }
+
+      @include min-width(1440px) {
+        font-size: 1.5vw;
+      }
+
+      @include min-width(1650px) {
+        font-size: 1.3vw;
+      }
+
+      @include min-width(1920px) {
+        font-size: 1vw;
+      }
     }
 
     > p {
@@ -228,6 +286,22 @@ export default {
       line-height: 2em;
       color: $color-white;
       font-size: 0.9vw;
+
+      @include min-width(1280px) {
+        font-size: 1.1vw;
+      }
+
+      @include min-width(1440px) {
+        font-size: 1vw;
+      }
+
+      @include min-width(1650px) {
+        font-size: 0.9vw;
+      }
+
+      @include min-width(1920px) {
+        font-size: 0.8vw;
+      }
     }
   }
 

@@ -298,11 +298,7 @@ export default {
   position: relative;
 
   @include min-width(1025px) {
-    margin-top: 55rem;
-  }
-
-  @include min-width(1280px) {
-    margin-top: 60rem;
+    margin-top: 50rem;
   }
 
   @include min-width(1440px) {

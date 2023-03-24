@@ -68,6 +68,12 @@
 export default {
   mounted() {
     var swiper5 = new Swiper('.swiper-course', {
+      loop: true,
+      effect: "fade",
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: '.swiper-course .swiper-pagination',
         clickable: true,
@@ -314,6 +320,7 @@ export default {
         justify-content: center;
         align-items: center;
         color: $color-white;
+        margin-right: 0.5rem;
 
         &::after {
           content: '';
