@@ -161,6 +161,7 @@ export default {
         delay: 4500,
         disableOnInteraction: false,
       },
+      slidesPerView: 1,
       spaceBetween: 30,
       breakpoints: {
         310: {
@@ -333,11 +334,6 @@ export default {
   margin-top: 5rem;
   display: flex;
   justify-content: space-between;
-
-  @include max-width(1025px) {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
 
   > .swiper-slide {
     width: 100%;

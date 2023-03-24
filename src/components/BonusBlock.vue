@@ -19,27 +19,27 @@
 </template>
 
 <script>
-import FormSingle from "@/components/FormSingle.vue";
+import FormSingle from '@/components/FormSingle.vue';
 
 export default {
   components: {
     FormSingle,
   },
   mounted() {
-    $(".btn-course").click(function () {
+    $('.btn-course').click(function () {
       let target = this.hash,
         $target = $(target).offset().top;
 
-      $("html, body").animate({ scrollTop: $target }), 1500;
+      $('html, body').animate({ scrollTop: $target }), 1500;
     });
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
 
 .s4-title {
   width: 240px;
@@ -98,22 +98,26 @@ export default {
     right: 100px;
   }
 
+  .btn-hover {
+    display: none;
+  }
+
   @include min-width(1025px) {
     .btn-def {
     }
 
     .btn-hover {
-			display: none;
+      display: none;
       opacity: 0;
     }
 
     &:hover {
       .btn-def {
-				display: none;
+        display: none;
         opacity: 0;
       }
       .btn-hover {
-				display: block;
+        display: block;
         opacity: 1;
       }
     }
