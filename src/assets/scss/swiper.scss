@@ -831,7 +831,8 @@ button.swiper-pagination-bullet {
 
 	@include min-width(1025px) {
 		display: block;
-		bottom: 65px !important;
+    left: 15% !important; 
+		bottom: -20px !important;
   }
 
 	@include min-width(1440px) {

@@ -149,6 +149,8 @@ export default {
   position: relative;
 
   @include min-width(1025px) {
+    margin-top: 5rem;
+
     &::before {
       content: '';
       width: 147px;
@@ -175,11 +177,25 @@ export default {
   }
 
   @include min-width(1280px) {
-    margin-top: 3rem;
+    &::before {
+      top: -100px;
+      left: -50px;
+    }
+
+    &::after {
+      top: 0px;
+      right: -100px;
+    }
   }
 
   @include min-width(1440px) {
-    margin-top: 5rem;
+    &::before {
+      top: -50px;
+    }
+
+    &::after {
+      top: 0px;
+    }
   }
 }
 .section2 {
@@ -192,15 +208,17 @@ export default {
   position: relative;
 
   &::after {
-    content: '';
-    display: block;
-    width: 200px;
-    height: 600px;
-    position: absolute;
-    top: -200px;
-    right: -25%;
-    background: url('@/assets/images/newpic/s4_bg_micro.png') no-repeat
-      center/contain;
+    @include min-width(1280px) {
+      content: '';
+      display: block;
+      width: 200px;
+      height: 600px;
+      position: absolute;
+      top: -200px;
+      right: -25%;
+      background: url('@/assets/images/newpic/s4_bg_micro.png') no-repeat
+        center/contain;
+    }
   }
 }
 .s2-content-silde {

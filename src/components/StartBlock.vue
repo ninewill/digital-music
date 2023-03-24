@@ -66,7 +66,7 @@
         </li>
       </ul>
       <!--start2-->
-      <div class="s1-content-title-2">
+      <div class="s1-content-title-22">
         <div class="h3">全方位引領最快捷徑，培養業界爭搶人才</div>
         <span class="s1-description"
           >星耀級別配音、成音講師帶你階段性傳授業界技能</span
@@ -107,9 +107,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
 
 .s1-title {
   width: 169.792px;
@@ -139,7 +139,7 @@ export default {};
     position: absolute;
     top: 0px;
     left: 0px;
-    background: url("@/assets/images/newpic/s2_START.svg") no-repeat
+    background: url('@/assets/images/newpic/s2_START.svg') no-repeat
       center/contain;
     @include hidetext;
   }
@@ -165,6 +165,8 @@ export default {};
 }
 .s1-content-title-1 {
   width: 870px;
+  position: relative;
+  z-index: 10;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -182,19 +184,19 @@ export default {};
     font-size: 28px;
     color: $color-primary-1;
 
-    //&::after {
-    //  content: "";
-    //  display: block;
-    //  position: absolute;
-    //  top: -35px;
-    //  left: 50%;
-    //  margin-left: -131px;
-    //  width: 262px;
-    //  height: 48px;
-    //  background: url("@/assets/images/newpic/s2_title.png") no-repeat;
-    //  background-size: contain;
-    //  background-position: 50% 50%;
-    //}
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      margin-left: -131px;
+      width: 262px;
+      height: 48px;
+      background: url('@/assets/images/newpic/s2_title.png') no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
   }
 
   > .s1-description {
@@ -205,7 +207,7 @@ export default {};
     color: $color-white;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -213,13 +215,13 @@ export default {};
       left: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
     }
 
     &:before {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -227,7 +229,7 @@ export default {};
       right: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
       transform: scaleX(-1);
@@ -240,7 +242,7 @@ export default {};
   @include min-width(1025px) {
   }
 }
-.s1-content-title-2 {
+.s1-content-title-22 {
   width: 870px;
   margin: 0 auto;
   position: relative;
@@ -250,16 +252,27 @@ export default {};
   flex-direction: column;
 
   &:before {
-    content: "";
-		position: absolute;
-		top: -120px;
-		left: -280px;
-		width: 239px;
-		height: 331px;
-    display: block;
-    background: url("@/assets/images/newpic/s3_bg_earphone.png") no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
+    @include min-width(1025px) {
+
+    }
+
+    @include min-width(1280px) {
+      content: '';
+      position: absolute;
+      top: -150px;
+      left: -150px;
+      width: 239px;
+      height: 331px;
+      display: block;
+      background: url('@/assets/images/newpic/s3_bg_earphone.png') no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+
+       @include min-width(1440px) {
+      top: -120px;
+      left: -280px;
+    }
   }
 
   > .h3 {
@@ -273,6 +286,20 @@ export default {};
     font-weight: 700;
     font-size: 28px;
     color: $color-primary-1;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      margin-left: -131px;
+      width: 262px;
+      height: 48px;
+      background: url('@/assets/images/newpic/s3_title.png') no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
   }
   > .s1-description {
     margin-top: 1.5rem;
@@ -282,7 +309,7 @@ export default {};
     color: $color-white;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -290,13 +317,13 @@ export default {};
       left: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
     }
 
     &:before {
-      content: "";
+      content: '';
       display: block;
       margin-top: -8px;
       position: absolute;
@@ -304,7 +331,7 @@ export default {};
       right: 60px;
       width: 90px;
       height: 16px;
-      background: url("@/assets/images/newpic/s0_line.svg") no-repeat;
+      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
       background-size: contain;
       background-position: 50% 50%;
       transform: scaleX(-1);

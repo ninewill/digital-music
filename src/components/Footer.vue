@@ -67,11 +67,21 @@ export default {};
 
 #footer {
   width: 100%;
+  margin: 100px 0;
   padding: 18px 20px;
+  position: relative;
 
   &::after{
     content: "";
+    position: absolute;
+    top: -150px;
+    left: 0;
     display: block;
+    width: 100%;
+    height: 206px;
+    background: url("@/assets/images/newpic/footer_wave.png") no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
   }
 
   @include min-width(768px) {

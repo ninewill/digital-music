@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="s1-content-title-2">
+    <div class="s3-content-title-2">
       <div class="h3">全方位解鎖數位成音技能，升職加薪進度條滿格加載</div>
       <span class="s1-description"
         >音效配樂規模強與吸金力躍進，音樂人才需求量大</span
@@ -51,7 +51,7 @@ export default {
 @import '@/assets/scss/reset.scss';
 @import '@/assets/scss/animate.scss';
 
-.s1-content-title-2 {
+.s3-content-title-2 {
   width: 870px;
   margin: 0 auto;
   position: relative;
@@ -61,16 +61,18 @@ export default {
   flex-direction: column;
 
   &:before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    left: -280px;
-    width: 192px;
-    height: 192px;
-    display: block;
-    background: url('@/assets/images/newpic/s6_bg_deco.png') no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
+    @include min-width(1280px) {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: -280px;
+      width: 192px;
+      height: 192px;
+      display: block;
+      background: url('@/assets/images/newpic/s6_bg_deco.png') no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
   }
 
   > .h3 {
@@ -100,17 +102,19 @@ export default {
     }
 
     &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50px;
-      right: -20%;
-      width: 124px;
-      height: 140px;
-      background: url('@/assets/images/newpic/s6_note.png') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-      animation: musicBounce 2.8s ease-in-out infinite;
+      @include min-width(1280px) {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: -20%;
+        width: 124px;
+        height: 140px;
+        background: url('@/assets/images/newpic/s6_note.png') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        animation: musicBounce 2.8s ease-in-out infinite;
+      }
     }
   }
   > .s1-description {
@@ -185,6 +189,15 @@ export default {
   display: flex;
   justify-content: space-between;
 
+  @include min-width(1280px) {
+    padding: 0 2rem;
+    padding-right: 0;
+  }
+
+  @include min-width(1440px) {
+    padding: 0 5rem;
+  }
+
   .salary-info {
     width: 35%;
     padding: 2.5rem;
@@ -228,6 +241,23 @@ export default {
       top: 0;
       right: -50px;
 
+      @include min-width(1280px) {
+        display: none;
+      }
+
+      @include min-width(1440px) {
+        display: block;
+        right: -70px;
+      }
+
+      @include min-width(1650px) {
+        right: -80px;
+      }
+
+      @include min-width(1920px) {
+        right: -150px;
+      }
+
       > li {
         margin-top: 1.3rem;
         color: $color-primary-1;
@@ -243,11 +273,12 @@ export default {
 
         @include min-width(1440px) {
           margin-top: 1rem;
-          font-size: 0.9vw;
+          font-size: 1.1rem;
         }
 
         @include min-width(1920px) {
           margin-top: 1.3rem;
+          font-size: 0.9vw;
         }
       }
     }

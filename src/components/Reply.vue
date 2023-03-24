@@ -94,7 +94,7 @@
           <div class="s5-container">
             <div class="s5-title">
               <h3 class="h3">數位成音課程</h3>
-              <span>東區學院｜學員  洪Ｏ恩</span>
+              <span>東區學院｜學員 洪Ｏ恩</span>
             </div>
             <div class="s5-text-wrap">
               <p>
@@ -113,7 +113,7 @@
           <div class="s5-container">
             <div class="s5-title">
               <h3 class="h3">數位成音課程</h3>
-              <span>中壢學院｜學員  邱Ｏ承</span>
+              <span>中壢學院｜學員 邱Ｏ承</span>
             </div>
             <div class="s5-text-wrap">
               <p>
@@ -132,7 +132,7 @@
           <div class="s5-container">
             <div class="s5-title">
               <h3 class="h3">數位成音課程</h3>
-              <span>東區學院｜學員  洪Ｏ恩</span>
+              <span>東區學院｜學員 洪Ｏ恩</span>
             </div>
             <div class="s5-text-wrap">
               <p>
@@ -221,20 +221,18 @@ export default {
   flex-direction: column;
 
   &:before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    left: -400px;
-    width: 136px;
-    height: 136px;
-    display: block;
-    background: url('@/assets/images/newpic/s10_note.png') no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
-    animation: musicBounce 2.8s ease-in-out infinite;
-
-    @include min-width(1025px) {
+    @include min-width(1280px) {
+      content: '';
+      position: absolute;
+      top: -120px;
       left: -150px;
+      width: 136px;
+      height: 136px;
+      display: block;
+      background: url('@/assets/images/newpic/s10_note.png') no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      animation: musicBounce 2.8s ease-in-out infinite;
     }
 
     @include min-width(1650px) {
@@ -446,8 +444,8 @@ export default {
   }
 }
 
-.star{
-  >img{
+.star {
+  > img {
     width: auto;
   }
 }

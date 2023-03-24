@@ -1,6 +1,6 @@
 <template>
   <div class="section4-1">
-    <div class="s1-content-title-2">
+    <div class="s1-content-title-24">
       <div class="h3">三個月課程，讓你扎實踏入成音世界</div>
       <span class="s1-description">每次教學，我們都全力以赴</span>
     </div>
@@ -77,7 +77,7 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 @import '@/assets/scss/mixin.scss';
 @import '@/assets/scss/variables.scss';
 @import '@/assets/scss/reset.scss';
@@ -129,12 +129,14 @@ export default {
 
   .iframe {
     width: 100%;
-    height: 56%;
+    height: 56.6%;
     margin: 0 auto;
     margin-top: 5rem;
 
+    @include min-width(1025px) {
+    }
+
     @include min-width(1280px) {
-      width: 80%;
     }
 
     @include min-width(1440px) {
@@ -149,7 +151,7 @@ export default {
   }
 }
 
-.s1-content-title-2 {
+.s1-content-title-24 {
   width: 870px;
   margin: 0 auto;
   position: relative;
@@ -159,19 +161,17 @@ export default {
   flex-direction: column;
 
   &:before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    left: -400px;
-    width: 136px;
-    height: 136px;
-    display: block;
-    background: url('@/assets/images/newpic/s9_bg_deco.png') no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
-
-    @include min-width(1025px) {
+    @include min-width(1280px) {
+      content: '';
+      position: absolute;
+      top: -120px;
       left: -150px;
+      width: 136px;
+      height: 136px;
+      display: block;
+      background: url('@/assets/images/newpic/s9_bg_deco.png') no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
     }
 
     @include min-width(1650px) {
@@ -180,7 +180,7 @@ export default {
   }
 
   &::after {
-    @include min-width(1025px) {
+    @include min-width(1280px) {
       content: '';
       position: absolute;
       top: 150px;
@@ -264,7 +264,7 @@ export default {
 }
 
 .curse-info {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 3rem 0;
   padding-right: 50px;
@@ -273,6 +273,13 @@ export default {
   border-bottom: 1px dashed $color-primary-1;
   display: flex;
   justify-content: space-between;
+
+  @include min-width(1025px) {
+  }
+
+  @include min-width(1440px) {
+    width: 80%;
+  }
 
   .curse-info-left {
     width: 45%;
@@ -339,8 +346,8 @@ export default {
     align-items: end;
     position: relative;
 
-    &::after{
-      content: "";
+    &::after {
+      content: '';
       display: block;
       position: absolute;
       right: -25px;
@@ -350,30 +357,29 @@ export default {
       background-color: $color-primary-1;
     }
 
-    .curse-img{
+    .curse-img {
       margin-right: 1rem;
 
-      >img{
+      > img {
         width: 100%;
       }
     }
 
     .swiper-course {
-      // height: 100%;
+      height: auto;
       overflow: hidden;
 
-      .swiper-course-s{
-
+      .swiper-course-s {
       }
 
-      .pagination-course{
+      .pagination-course {
         top: 0;
         right: -40px;
         left: auto;
         display: flex;
         flex-direction: column;
 
-        >span{
+        > span {
           margin-bottom: 20px;
         }
       }

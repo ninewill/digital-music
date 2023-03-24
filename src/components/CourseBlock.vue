@@ -54,14 +54,14 @@
 </template>
 
 <script>
-import CdPopup from "@/components/CdPopup01.vue";
+import CdPopup from '@/components/CdPopup01.vue';
 
 export default {
   components: {
     CdPopup,
   },
   mounted() {
-    var swiper5 = new Swiper(".swiper-slid-part1 .mySwiper-part1", {
+    var swiper5 = new Swiper('.swiper-slid-part1 .mySwiper-part1', {
       slidesPerView: 1,
       spaceBetween: 15,
       slidesPerGroup: 3,
@@ -69,20 +69,23 @@ export default {
         310: {
           slidesPerView: 1,
         },
-        1025: {
+        768: {
           slidesPerView: 2,
+        },
+        1025: {
+          slidesPerView: 3,
         },
         1440: {
           slidesPerView: 3,
         },
       },
       pagination: {
-        el: ".mySwiper-part1 .swiper-pagination",
+        el: '.mySwiper-part1 .swiper-pagination',
         clickable: true,
       },
       navigation: {
-        nextEl: ".arrow-btn-next3",
-        prevEl: ".arrow-btn-prev3",
+        nextEl: '.arrow-btn-next3',
+        prevEl: '.arrow-btn-prev3',
       },
     });
   },
@@ -90,10 +93,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-@import "@/assets/scss/swiper.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/swiper.scss';
 
 .course-area {
   position: relative;
@@ -154,6 +157,16 @@ export default {
 
 .mySwiper-part1 {
   overflow: hidden;
+
+  img {
+    width: 100% !important;
+    height: auto;
+
+    @include min-width(1440px) {
+      width: auto !important;
+      height: 100%;
+    }
+  }
 }
 
 .swiper-slid-part1 {
@@ -165,7 +178,7 @@ export default {
   z-index: 10;
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: 98%;
     height: 300px;
@@ -195,7 +208,7 @@ export default {
 
 .arrow-btn-next3 {
   right: 5%;
-  background-image: url("@/assets/images/newbtn/s4_arrow_default.svg");
+  background-image: url('@/assets/images/newbtn/s4_arrow_default.svg');
 
   @include min-width(1280px) {
     right: 3%;
@@ -210,7 +223,7 @@ export default {
 
 .arrow-btn-prev3 {
   left: 5%;
-  background-image: url("@/assets/images/newbtn/s4_arrow_default.svg");
+  background-image: url('@/assets/images/newbtn/s4_arrow_default.svg');
   @include min-width(1280px) {
     left: 3%;
   }
@@ -250,7 +263,7 @@ export default {
     display: block;
     width: 286.08px;
     height: 69.76px;
-    background: url("@/assets/images/newbtn/s4_view_default.svg") no-repeat
+    background: url('@/assets/images/newbtn/s4_view_default.svg') no-repeat
       center/contain;
     @include hidetext;
     transition: 0.2s;
@@ -262,7 +275,7 @@ export default {
 
     @include min-width(1025px) {
       &:hover {
-        background: url("@/assets/images/newbtn/s4_view_hover.svg") no-repeat
+        background: url('@/assets/images/newbtn/s4_view_hover.svg') no-repeat
           center/contain;
       }
     }

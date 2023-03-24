@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="s1-content-title-2">
+    <div class="s1-content-title-23">
       <div class="h3">學配音、音效、混音、錄音，首選赫綵</div>
       <span class="s1-description"
         >全方位數位成音課程，讓你與業界無縫接軌！</span
@@ -55,7 +55,7 @@ export default {
 @import '@/assets/scss/reset.scss';
 @import '@/assets/scss/animate.scss';
 
-.s1-content-title-2 {
+.s1-content-title-23 {
   width: 870px;
   margin: 0 auto;
   position: relative;
@@ -65,16 +65,18 @@ export default {
   flex-direction: column;
 
   &:before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    left: -500px;
-    width: 316px;
-    height: 360px;
-    display: block;
-    background: url('@/assets/images/newpic/s7_bg_deco.png') no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
+    @include min-width(1280px) {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: -500px;
+      width: 316px;
+      height: 360px;
+      display: block;
+      background: url('@/assets/images/newpic/s7_bg_deco.png') no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
   }
 
   > .h3 {
@@ -181,7 +183,6 @@ export default {
       @include min-width(1024px) {
         font-size: 1.3vw;
       }
-
 
       @include min-width(1280px) {
         font-size: 1vw;
