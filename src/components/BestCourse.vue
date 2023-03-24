@@ -69,7 +69,7 @@ export default {
   mounted() {
     var swiper5 = new Swiper('.swiper-course', {
       loop: true,
-      effect: "fade",
+      effect: 'fade',
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -289,6 +289,18 @@ export default {
 
   .curse-info-left {
     width: 45%;
+
+    @include min-width(1025px) {
+      width: 52%;
+    }
+
+    @include min-width(1280px) {
+      width: 50%;
+    }
+
+        @include min-width(1440px) {
+      width: 45%;
+    }
 
     .curse-info-title {
       > .h3 {

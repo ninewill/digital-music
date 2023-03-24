@@ -177,15 +177,21 @@ export default {
   justify-content: center;
   z-index: 10;
 
-  &::after {
-    content: '';
-    display: block;
-    width: 95%;
-    height: 300px;
-    margin: 0 auto;
-    border: 1px solid $color-primary-1;
-    position: absolute;
-    top: 100px;
+&::after {
+    @include min-width(1025px) {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 300px;
+      margin: 0 auto;
+      border: 1px solid $color-primary-1;
+      position: absolute;
+      top: 100px;
+    }
+
+    @include min-width(1440px) {
+      width: 98%;
+    }
   }
 
   @include min-width(1025px) {
