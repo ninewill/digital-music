@@ -103,7 +103,7 @@ export default {
   }
 
   @include min-width(1650px) {
-    margin-top: -60%;
+    margin-top: -66%;
   }
 
   @include min-width(1920px) {
@@ -266,7 +266,7 @@ export default {
 .curse-info {
   width: 80%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
   padding-right: 50px;
   margin-top: 5rem;
   border-top: 1px dashed $color-primary-1;
@@ -359,7 +359,7 @@ export default {
     }
 
     .swiper-course {
-      height: 100%;
+      // height: 100%;
       overflow: hidden;
 
       .swiper-course-s{

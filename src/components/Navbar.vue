@@ -3,8 +3,10 @@
   <header id="header">
     <div class="mainheader">
       <div class="side-left">
-        <div class="index-info">
-          <img src="@/assets/images/newpic/s1_logo.svg" alt="圖片" />
+        <div class="index-info floatbtn">
+          <a href="javascript:;" class="top-btn" title="TOP">
+            <img src="@/assets/images/newpic/s1_logo.svg" alt="圖片" />
+          </a>
         </div>
       </div>
       <div class="side-right">
@@ -31,13 +33,39 @@ export default {
   setup() {
     return {};
   },
+  mounted() {
+    /*
+     * ==========================================================================
+     * TOP 按鈕
+     * ==========================================================================
+     */
+
+    const $window = $(window);
+    let scrollTop = $window.scrollTop();
+    const $floatBtn = $('.floatbtn');
+    const $topBtn = $floatBtn.find('.top-btn');
+
+    $topBtn.on('click', function () {
+      $('html, body').animate(
+        {
+          scrollTop: 0,
+        },
+        800,
+        function () {
+          // $('#u').trigger('focus');
+          $('.firstGoTo-btn').trigger('focus');
+        }
+      );
+      return false;
+    });
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
 
 // * ==========================================================================
 // * 共用
@@ -134,14 +162,14 @@ export default {
         position: absolute;
         top: 0px;
         left: 0px;
-        background: url("@/assets/images/newbtn/s0_appedo_default.svg")
+        background: url('@/assets/images/newbtn/s0_appedo_default.svg')
           no-repeat center/contain;
         @include hidetext;
         transition: 0.2s;
 
         @include min-width(1025px) {
           &:hover {
-            background: url("@/assets/images/newbtn/s0_appedo_hover.svg")
+            background: url('@/assets/images/newbtn/s0_appedo_hover.svg')
               no-repeat center/contain;
           }
         }

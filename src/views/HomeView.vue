@@ -43,9 +43,9 @@
     <div id="3" class="section-block course-block">
       <BestCourse />
     </div>
-    <!--WITNESS-->
-    <section class="witness-block section7">
-      <Witness />
+    <!--Reply-->
+    <section class="section7">
+      <Reply />
     </section>
   </div>
   <Cursor />
@@ -62,7 +62,7 @@ import Salary from '@/components/Salary.vue';
 import BestChoice from '@/components/BestChoice.vue';
 import BonusBlock from '@/components/BonusBlock.vue';
 import BestCourse from '@/components/BestCourse.vue';
-import Witness from '@/components/Witness.vue';
+import Reply from '@/components/Reply.vue';
 import Swiper from '@/components/Swiper.vue';
 import Cursor from '@/components/Cursor.vue';
 
@@ -78,7 +78,7 @@ export default {
     BestChoice,
     BonusBlock,
     BestCourse,
-    Witness,
+    Reply,
     Swiper,
     Cursor,
   },
@@ -138,7 +138,7 @@ export default {
     height: 436px;
     display: block;
     position: absolute;
-    top: 80px;
+    top: 120px;
     right: 0px;
     background: url('@/assets/images/newpic/s0_deco_text.svg') no-repeat
       center/cover;
@@ -276,8 +276,28 @@ export default {
 }
 
 .section7 {
-  margin-top: 30rem;
+  margin-top: 35rem;
   position: relative;
+
+  @include min-width(1025px) {
+    margin-top: 55rem;
+  }
+
+  @include min-width(1280px) {
+    margin-top: 60rem;
+  }
+
+  @include min-width(1440px) {
+    margin-top: 55rem;
+  }
+
+  @include min-width(1650px) {
+    margin-top: 50rem;
+  }
+
+  @include min-width(1920px) {
+    margin-top: 35rem;
+  }
 }
 
 .tc-bar {
@@ -320,32 +340,20 @@ export default {
     margin-top: 20rem;
   }
 
-    @include min-width(1280px) {
+  @include min-width(1280px) {
     margin-top: 15rem;
   }
 
   @include min-width(1440px) {
-    margin-top: 14rem;
+    margin-top: 20rem;
   }
 
-    @include min-width(1650px) {
-    margin-top: 12rem;
+  @include min-width(1650px) {
+    margin-top: 17rem;
   }
 
   @include min-width(1920px) {
     margin-top: 15rem;
-  }
-}
-
-.witness-block {
-  padding-bottom: 3rem;
-  position: relative;
-  border-image: linear-gradient(to right, #fff176, #00e0b8) 30;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-
-  @include min-width(1025px) {
-    padding-bottom: 0;
   }
 }
 </style>

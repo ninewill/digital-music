@@ -68,7 +68,11 @@ export default {};
 #footer {
   width: 100%;
   padding: 18px 20px;
-  background-color: $color-primary-1;
+
+  &::after{
+    content: "";
+    display: block;
+  }
 
   @include min-width(768px) {
     padding: 18px 20px;
