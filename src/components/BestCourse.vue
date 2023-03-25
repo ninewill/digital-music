@@ -92,11 +92,15 @@ export default {
 
 .section4-1 {
   width: 100%;
-  height: 900px;
-  position: absolute;
-  margin-top: -65%;
+  margin-top: 10%;
+
+  @include min-width(768px) {
+    margin-top: 15%;
+  }
 
   @include min-width(1025px) {
+    position: absolute;
+    height: 900px;
     margin-top: -75%;
   }
 
@@ -135,11 +139,21 @@ export default {
 
   .iframe {
     width: 100%;
-    height: 56.6%;
+    height: 200px;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
+
+    @include min-width(484px) {
+      height: 400px;
+    }
+
+    @include min-width(768px) {
+      height: 500px;
+    }
 
     @include min-width(1025px) {
+      margin-top: 5rem;
+      height: 56.6%;
     }
 
     @include min-width(1280px) {
@@ -158,13 +172,17 @@ export default {
 }
 
 .s1-content-title-24 {
-  width: 870px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   margin-top: 5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
+
+  @include min-width(1025px) {
+    width: 870px;
+  }
 
   &:before {
     @include min-width(1280px) {
@@ -209,13 +227,19 @@ export default {
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 2rem 3rem;
+    padding: 2rem 4rem;
     display: block;
     border: 1px solid $color-primary-1;
     border-radius: 15px;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 18px;
+    line-height: 1.5em;
     color: $color-primary-1;
+
+    @include min-width(1025px) {
+      padding: 2rem 3rem;
+      font-size: 28px;
+    }
 
     &::before {
       content: '';
@@ -235,36 +259,45 @@ export default {
     margin-top: 1.5rem;
     position: relative;
     display: block;
-    font-size: 24px;
+    line-height: 1.5em;
+    font-size: 14px;
     color: $color-white;
 
+    @include min-width(1025px) {
+      font-size: 24px;
+    }
+
     &::after {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      left: 180px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        left: 180px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+      }
     }
 
     &:before {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      right: 180px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-      transform: scaleX(-1);
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        right: 180px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        transform: scaleX(-1);
+      }
     }
   }
 }
@@ -272,15 +305,16 @@ export default {
 .curse-info {
   width: 100%;
   margin: 0 auto;
-  padding: 3rem 0;
-  padding-right: 50px;
-  margin-top: 5rem;
+  padding: 2rem 0;
+  margin-top: 2rem;
   border-top: 1px dashed $color-primary-1;
   border-bottom: 1px dashed $color-primary-1;
-  display: flex;
-  justify-content: space-between;
 
   @include min-width(1025px) {
+    margin-top: 5rem;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   @include min-width(1440px) {
@@ -288,7 +322,7 @@ export default {
   }
 
   .curse-info-left {
-    width: 45%;
+    width: 100%;
 
     @include min-width(1025px) {
       width: 52%;
@@ -298,41 +332,58 @@ export default {
       width: 50%;
     }
 
-        @include min-width(1440px) {
+    @include min-width(1440px) {
       width: 45%;
     }
 
     .curse-info-title {
       > .h3 {
-        font-size: 36px;
+        font-size: 28px;
         font-weight: 700;
         color: $color-primary-1;
+
+        @include min-width(1025px) {
+          font-size: 36px;
+        }
       }
 
       > span {
         margin-top: 1.5rem;
         display: block;
-        font-size: 22px;
+        font-size: 18px;
         color: $color-white;
+
+        @include min-width(1025px) {
+          font-size: 22px;
+        }
       }
     }
 
     .curse-info-item {
       margin-top: 1.5rem;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0;
       display: flex;
       justify-content: center;
       border-top: 1px solid $color-primary-1;
       border-bottom: 1px solid $color-primary-1;
 
+      @include min-width(1025px) {
+        padding: 0.5rem 1rem;
+      }
+
       > li {
         width: 23%;
+        font-size: 0.9rem;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         color: $color-white;
         margin-right: 0.5rem;
+
+        @include min-width(1025px) {
+          font-size: 1rem;
+        }
 
         &::after {
           content: '';
@@ -360,10 +411,22 @@ export default {
     }
   }
   .curse-info-right {
-    width: 35%;
+    width: 85%;
     display: flex;
     align-items: end;
     position: relative;
+
+    @include min-width(484px) {
+      width: 95%;
+    }
+
+    @include min-width(768px) {
+      width: 90%;
+    }
+
+    @include min-width(1025px) {
+      width: 35%;
+    }
 
     &::after {
       content: '';
@@ -372,8 +435,16 @@ export default {
       right: -25px;
       bottom: 0;
       width: 1px;
-      height: 200px;
+      height: 120px;
       background-color: $color-primary-1;
+
+      @include min-width(768px) {
+        height: 400px;
+      }
+
+      @include min-width(1025px) {
+        height: 200px;
+      }
     }
 
     .curse-img {

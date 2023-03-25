@@ -93,7 +93,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
   margin: 0 auto;
   transition: 0.2s;
 
@@ -116,24 +115,30 @@ export default {
 }
 
 .index-info {
-  display: none;
-
-  @include min-width(768px) {
-    display: block;
-    margin-left: 0;
-    margin-right: auto;
-    font-weight: 400;
-    font-size: 18px;
-    color: $color-primary-1;
-  }
+  width: 156px;
+  height: 28px;
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 18px;
+  color: $color-primary-1;
 
   @include min-width(1025px) {
+    width: 195px;
+    height: 35px;
     font-size: 24px;
+  }
+
+  >a{
+    >img{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 .side-right {
-  width: 100%;
   order: 0;
 
   @include min-width(1025px) {
@@ -150,10 +155,15 @@ export default {
     }
 
     .logo-btn {
-      width: 167px;
-      height: 38px;
+      width: 133px;
+      height: 28px;
       display: block;
       position: relative;
+
+      @include min-width(1025px) {
+        width: 167px;
+        height: 38px;
+      }
 
       > a {
         width: 100%;

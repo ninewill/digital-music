@@ -145,7 +145,7 @@ export default {};
   }
 }
 .s1-content {
-  margin-top: 6rem;
+  margin-top: 5rem;
   position: relative;
   //border-top: 1px dashed $color-primary-1;
   //border-right: 1px dashed $color-primary-1;
@@ -164,7 +164,7 @@ export default {};
   }
 }
 .s1-content-title-1 {
-  width: 870px;
+  width: 100%;
   position: relative;
   z-index: 10;
   margin: 0 auto;
@@ -172,17 +172,27 @@ export default {};
   display: flex;
   flex-direction: column;
 
+  @include min-width(1025px) {
+    width: 870px;
+  }
+
   > .h3 {
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     display: block;
     border: 1px solid $color-primary-1;
     border-radius: 15px;
     font-weight: 700;
-    font-size: 28px;
+    line-height: 1.5em;
+    font-size: 18px;
     color: $color-primary-1;
+
+    @include min-width(1025px) {
+      padding: 2rem 3rem;
+      font-size: 28px;
+    }
 
     &::after {
       content: '';
@@ -203,47 +213,52 @@ export default {};
     margin-top: 1.5rem;
     position: relative;
     display: block;
-    font-size: 24px;
+    font-size: 14px;
     color: $color-white;
 
+    @include min-width(1025px) {
+      font-size: 24px;
+    }
+
     &::after {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      left: 60px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+      }
     }
 
     &:before {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      right: 60px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-      transform: scaleX(-1);
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        transform: scaleX(-1);
+      }
     }
   }
 
   @include min-width(768px) {
   }
-
-  @include min-width(1025px) {
-  }
 }
 .s1-content-title-22 {
-  width: 870px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   margin-top: 5rem;
@@ -251,9 +266,12 @@ export default {};
   display: flex;
   flex-direction: column;
 
+  @include min-width(1025px) {
+    width: 870px;
+  }
+
   &:before {
     @include min-width(1025px) {
-
     }
 
     @include min-width(1280px) {
@@ -269,7 +287,7 @@ export default {};
       background-position: 50% 50%;
     }
 
-       @include min-width(1440px) {
+    @include min-width(1440px) {
       top: -120px;
       left: -280px;
     }
@@ -279,13 +297,19 @@ export default {};
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 2rem 3rem;
+    padding: 2rem 4rem;
     display: block;
     border: 1px solid $color-primary-1;
     border-radius: 15px;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 18px;
+    line-height: 1.5em;
     color: $color-primary-1;
+
+    @include min-width(1025px) {
+      padding: 2rem 3rem;
+      font-size: 28px;
+    }
 
     &::after {
       content: '';
@@ -305,45 +329,55 @@ export default {};
     margin-top: 1.5rem;
     position: relative;
     display: block;
-    font-size: 24px;
+    line-height: 1.5em;
+    font-size: 14px;
     color: $color-white;
 
+    @include min-width(1025px) {
+      font-size: 24px;
+    }
+
     &::after {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      left: 60px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+      }
     }
 
     &:before {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      right: 60px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-      transform: scaleX(-1);
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        transform: scaleX(-1);
+      }
     }
   }
 }
 .s1-item-wrap {
   width: 80%;
   margin: 0 auto;
-  margin-top: 6rem;
+  margin-top: 5rem;
 
   @include min-width(1025px) {
+    margin-top: 6rem;
     padding-bottom: 5rem;
     padding-left: 0;
     display: flex;
@@ -413,10 +447,18 @@ export default {};
       font-weight: 700;
       font-size: 22px;
       color: $color-primary-1;
+
+      @include min-width(768px) {
+        font-size: 24px;
+      }
+
+      @include min-width(1025px) {
+        font-size: 22px;
+      }
     }
 
     .s1-info {
-      margin-top: 2rem;
+      margin-top: 1rem;
       line-height: 26px;
       font-weight: 400;
       font-size: 18px;
@@ -424,6 +466,7 @@ export default {};
       color: $color-white;
 
       @include min-width(1025px) {
+        margin-top: 2rem;
         font-size: 14px;
       }
 
@@ -490,14 +533,22 @@ export default {};
     }
 
     .s1-img-1 {
+      display: none;
+      
+      @include min-width(1025px) {
+        display: block;
+      }
+
       > img {
         width: 100%;
       }
     }
 
     .s1-img-2 {
-      opacity: 0;
-      display: none;
+      @include min-width(1025px) {
+        opacity: 0;
+        display: none;
+      }
 
       > img {
         width: 100%;

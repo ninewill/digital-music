@@ -54,13 +54,17 @@ export default {
 @import '@/assets/scss/animate.scss';
 
 .s3-content-title-2 {
-  width: 870px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   margin-top: 5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
+
+  @include min-width(1025px) {
+    width: 870px;
+  }
 
   &:before {
     @include min-width(1280px) {
@@ -81,13 +85,23 @@ export default {
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     display: block;
     border: 1px solid $color-primary-1;
     border-radius: 15px;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 18px;
+    line-height: 1.5em;
     color: $color-primary-1;
+
+    @include min-width(768px) {
+      padding: 2rem 5rem;
+    }
+
+    @include min-width(1025px) {
+      padding: 2rem 3rem;
+      font-size: 28px;
+    }
 
     &::before {
       content: '';
@@ -123,36 +137,45 @@ export default {
     margin-top: 1.5rem;
     position: relative;
     display: block;
-    font-size: 24px;
+    font-size: 14px;
+    line-height: 1.5em;
     color: $color-white;
 
+    @include min-width(1025px) {
+      font-size: 24px;
+    }
+
     &::after {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      left: 60px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+      }
     }
 
     &:before {
-      content: '';
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      top: 50%;
-      right: 60px;
-      width: 90px;
-      height: 16px;
-      background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
-      transform: scaleX(-1);
+      @include min-width(1025px) {
+        content: '';
+        display: block;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        width: 90px;
+        height: 16px;
+        background: url('@/assets/images/newpic/s0_line.svg') no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        transform: scaleX(-1);
+      }
     }
   }
 }
@@ -169,13 +192,20 @@ export default {
   }
   .salary-title {
     position: relative;
-    margin-top: 5rem;
+    margin-top: 2rem;
     padding: 0 5rem;
-    display: flex;
-    align-items: center;
+
+    @include min-width(768px) {
+margin-top: 5rem;
+    }
+
+    @include min-width(1025px) {
+      display: flex;
+      align-items: center;
+    }
 
     .salary-title-img {
-      width: 40%;
+      width: 100%;
 
       @include min-width(1025px) {
         width: 40%;
@@ -202,12 +232,14 @@ export default {
       content: '';
       display: block;
       position: absolute;
+      bottom: -50px;
       right: 0;
-      width: 60%;
+      width: 100%;
       border: 1px dashed $color-primary-1;
 
       @include min-width(1025px) {
         width: 50%;
+        bottom: auto;
       }
 
       @include min-width(1440px) {
@@ -218,10 +250,13 @@ export default {
 }
 
 .salary-wrap {
-  margin-top: 5rem;
-  padding: 0 5rem;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 8rem;
+
+  @include min-width(1025px) {
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
 
   @include min-width(1280px) {
     padding: 0 2rem;
@@ -233,11 +268,15 @@ export default {
   }
 
   .salary-info {
-    width: 35%;
+    width: 100%;
     padding: 2.5rem;
     border: 1px solid $color-primary-1;
     border-radius: 20px;
     position: relative;
+
+    @include min-width(1025px) {
+      width: 35%;
+    }
 
     @include min-width(1280px) {
       padding: 2.5rem 1.5rem;
@@ -249,19 +288,29 @@ export default {
 
     &::after {
       content: '';
-      width: 73px;
-      height: 73px;
+      width: 50px;
+      height: 50px;
       position: absolute;
-      top: -35px;
-      left: -35px;
+      top: -25px;
+      left: -15px;
       display: block;
       background: url('@/assets/images/newpic/s6_star.png') no-repeat
         center/contain;
+      @include min-width(1025px) {
+        width: 73px;
+        height: 73px;
+        top: -35px;
+        left: -35px;
+      }
     }
 
     > .h4 {
       color: $color-primary-1;
-      font-size: 1.2vw;
+      font-size: 1.125rem;
+
+      @include min-width(1025px) {
+        font-size: 1.2vw;
+      }
 
       @include min-width(1280px) {
         font-size: 1.6vw;
@@ -285,7 +334,11 @@ export default {
       margin-bottom: 0;
       line-height: 2em;
       color: $color-white;
-      font-size: 0.9vw;
+      font-size: 1rem;
+
+      @include min-width(1025px) {
+        font-size: 0.9vw;
+      }
 
       @include min-width(1280px) {
         font-size: 1.1vw;
@@ -306,17 +359,23 @@ export default {
   }
 
   .salary-chart-bar {
-    width: 60%;
     position: relative;
+    width: 100%;
+    margin-top: 2rem;
+
+    @include min-width(1025px) {
+      margin-top: 0;
+      width: 60%;
+    }
 
     .salary-num {
-      margin-top: 1rem;
-      position: absolute;
-      top: 0;
-      right: -50px;
+      display: none;
 
       @include min-width(1280px) {
-        display: none;
+        margin-top: 1rem;
+        position: absolute;
+        top: 0;
+        right: -50px;
       }
 
       @include min-width(1440px) {

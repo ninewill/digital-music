@@ -476,7 +476,7 @@ distributionSubmitHandler(function(response){
     margin-top: -33%;
     margin-left: 3%;
     width: 100%;
-    padding-bottom: 29.32%;
+    padding-bottom: 10%;
     z-index: 10;
     background: url('@/assets/images/newpic/s8_BONUS.svg') no-repeat;
     background-size: contain;
@@ -487,6 +487,31 @@ distributionSubmitHandler(function(response){
       margin-top: -22%;
       margin-left: 25%;
       padding-bottom: 17.34%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -70px;
+      width: 150px;
+      height: 131px;
+      background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
+      background-size: contain;
+
+      @include min-width(768px) {
+        width: 220px;
+        height: 192px;
+        top: -50px;
+      }
+
+      @include min-width(1025px) {
+        width: 241px;
+        height: 211px;
+        right: 0;
+        top: -105px;
+      }
     }
 
     @include min-width(1025px) {
@@ -513,18 +538,6 @@ distributionSubmitHandler(function(response){
         background: url('@/assets/images/newpic/s8_bg_deco.png') no-repeat;
         background-size: contain;
       }
-
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        top: -105px;
-        width: 241px;
-        height: 211px;
-        background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
-        background-size: contain;
-      }
     }
 
     @include min-width(1280px) {
@@ -548,6 +561,7 @@ distributionSubmitHandler(function(response){
     margin-top: 2rem;
 
     > .h3 {
+      text-align: center;
       display: block;
       font-weight: 500;
       font-size: 32px;
@@ -580,15 +594,17 @@ distributionSubmitHandler(function(response){
   }
 
   &::after {
-    content: '';
-    width: 115px;
-    height: 115px;
-    position: absolute;
-    top: -90px;
-    right: -60px;
-    display: block;
-    background: url('@/assets/images/newpic/s8_star.png') no-repeat
-      center/contain;
+    @include min-width(1025px) {
+      content: '';
+      width: 115px;
+      height: 115px;
+      position: absolute;
+      top: -90px;
+      right: -60px;
+      display: block;
+      background: url('@/assets/images/newpic/s8_star.png') no-repeat
+        center/contain;
+    }
   }
 }
 
@@ -730,21 +746,29 @@ distributionSubmitHandler(function(response){
 }
 
 .swiper-tag {
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 35%;
   margin: 0 auto;
+  margin-top: 0rem;
+  margin-left: -60px;
 
   > img {
     width: 100%;
   }
 
+  @include min-width(484px) {
+    width: 25%;
+    margin-left: -12%;
+  }
+
   @include min-width(768px) {
-    width: 20%;
+    width: 30%;
+    margin-left: -15%;
   }
 
   @include min-width(1025px) {
-    position: absolute;
-    top: 0;
-    left: 50%;
     width: 25%;
     margin-top: 4.5rem;
     margin-left: -64.28px;
@@ -830,7 +854,14 @@ distributionSubmitHandler(function(response){
 }
 
 .main-banner {
-  width: 50%;
+  width: 40%;
+
+  @include min-width(484px) {
+    width: 30%;
+  }
+  @include min-width(768px) {
+    width: 28%;
+  }
 
   @include min-width(1024px) {
     width: 40%;

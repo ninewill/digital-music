@@ -147,6 +147,7 @@ export default {
 
 .section1 {
   position: relative;
+  margin-top: 5rem;
 
   @include min-width(1025px) {
     margin-top: 5rem;
@@ -204,8 +205,12 @@ export default {
 }
 
 .section2-1 {
-  margin-top: 15rem;
+  margin-top: 5rem;
   position: relative;
+
+  @include min-width(768px) {
+    margin-top: 15rem;
+  }
 
   &::after {
     @include min-width(1280px) {
@@ -267,7 +272,7 @@ export default {
 }
 
 .section3 {
-  margin-top: 12rem;
+  margin-top: 5rem;
   position: relative;
 
   @include min-width(768px) {
@@ -279,8 +284,12 @@ export default {
   }
 }
 .section4 {
-  margin-top: 12rem;
+  margin-top: 6rem;
   position: relative;
+
+  @include min-width(1025px) {
+    margin-top: 12rem;
+  }
 }
 
 .section5 {
@@ -289,12 +298,15 @@ export default {
 }
 
 .section6 {
-  margin-top: 15rem;
+  margin-top: 0rem;
   position: relative;
+
+  @include min-width(1025px) {
+    margin-top: 15rem;
+  }
 }
 
 .section7 {
-  margin-top: 35rem;
   position: relative;
 
   @include min-width(1025px) {
@@ -315,9 +327,25 @@ export default {
 }
 
 .tc-bar {
-  padding: 3.75rem 0;
+  padding: 40px;
   border-top: 1px solid $color-primary-1;
   border-bottom: 1px solid $color-primary-1;
+
+  @include min-width(484px) {
+    padding: 3.75rem 10rem 3.75rem 5rem;
+  }
+
+  @include min-width(768px) {
+    padding: 3.75rem 16rem;
+  }
+
+  @include min-width(960px) {
+    padding: 3.75rem 18rem;
+  }
+
+  @include min-width(1025px) {
+    padding: 3.75rem 0;
+  }
 }
 
 .bonus-bar {
@@ -344,14 +372,12 @@ export default {
 }
 
 .wave {
-  width: 100%;
-  margin-top: 3rem;
-  padding-bottom: 42.9%;
-  background: url('@/assets/images/newpic/s9_bg_line.png') no-repeat
-    center/cover;
-
   @include min-width(1025px) {
     margin-top: 20rem;
+    width: 100%;
+    padding-bottom: 42.9%;
+    background: url('@/assets/images/newpic/s9_bg_line.png') no-repeat
+      center/cover;
   }
 
   @include min-width(1280px) {

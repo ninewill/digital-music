@@ -21,10 +21,10 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-@import "@/assets/scss/animate.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/animate.scss';
 
 .tc-top {
   display: flex;
@@ -32,7 +32,12 @@ export default {};
   justify-content: space-between;
 
   .tc-left {
-    width: 60%;
+    width: 80%;
+
+    @include min-width(768px) {
+      width: 60%;
+    }
+
     .tc-l-img {
       > img {
         width: 100%;
@@ -42,25 +47,31 @@ export default {};
 
   .tc-right {
     width: 28%;
+
     .tc-r-img {
       position: relative;
-			animation: peopleBounce 2.5s ease-in-out infinite;
+
+      @include min-width(1025px) {
+        animation: peopleBounce 2.5s ease-in-out infinite;
+      }
 
       > img {
         width: 100%;
       }
 
       &::after {
-        content: "";
-        position: absolute;
-        top: -100px;
-        display: block;
-        width: 150px;
-        height: 170px;
-        background: url("@/assets/images/newpic/s5_note.png") no-repeat;
-        background-size: contain;
-        background-position: 50% 50%;
-				animation: musicBounce 2.2s ease-in-out infinite;
+        @include min-width(1025px) {
+          content: '';
+          position: absolute;
+          top: -100px;
+          display: block;
+          width: 150px;
+          height: 170px;
+          background: url('@/assets/images/newpic/s5_note.png') no-repeat;
+          background-size: contain;
+          background-position: 50% 50%;
+          animation: musicBounce 2.2s ease-in-out infinite;
+        }
       }
     }
   }

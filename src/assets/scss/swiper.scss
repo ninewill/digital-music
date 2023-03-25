@@ -823,10 +823,19 @@ button.swiper-pagination-bullet {
 
 
 .swiper-pagination-swiper {
+  width: 60% !important;
+  left: 50% !important;
+  margin-left: -105px;
   bottom: 100px !important;
 
 	@include min-width(768px) {
-		bottom: 80px !important;
+    width: auto !important;
+    margin-left: auto;
+		bottom: 145px !important;
+	}
+
+  @include min-width(960px) {
+		bottom: 115px !important;
 	}
 
 	@include min-width(1025px) {
@@ -866,9 +875,27 @@ button.swiper-pagination-bullet {
 }
 
 .page-p{
-	position: absolute;
-	left: 5%;
-	bottom: -15px;
+display: none;
+
+  @include min-width(768px) {
+    position: absolute;
+    display: block;
+    margin-left: -100px;
+    left: 50%;
+    bottom: 150px;
+  }
+
+  @include min-width(960px) {
+    margin-left: -100px;
+    left: 50%;
+    bottom: 120px;
+  }
+
+  @include min-width(1025px) {
+    margin-left: auto;
+    left: 5%;
+    bottom: -15px;
+  }
 	
 
 	>img{

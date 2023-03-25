@@ -64,19 +64,22 @@ export default {
     var swiper5 = new Swiper('.swiper-slid-part1 .mySwiper-part1', {
       slidesPerView: 1,
       spaceBetween: 15,
-      slidesPerGroup: 3,
+      slidesPerGroup: 1,
       breakpoints: {
         310: {
           slidesPerView: 1,
         },
         768: {
           slidesPerView: 2,
+          slidesPerGroup: 3,
         },
         1025: {
           slidesPerView: 3,
+          slidesPerGroup: 3,
         },
         1440: {
           slidesPerView: 3,
+          slidesPerGroup: 3,
         },
       },
       pagination: {
@@ -103,16 +106,26 @@ export default {
 }
 
 .s2-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include min-width(1025px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .s2-title-left {
-    width: 60%;
+    width: 100%;
     display: flex;
 
+    @include min-width(1025px) {
+      width: 60%;
+    }
+
     .s2-title-left-l {
-      width: 25%;
+      width: 30%;
+
+      @include min-width(1025px) {
+        width: 25%;
+      }
 
       > img {
         width: 100%;
@@ -126,28 +139,52 @@ export default {
       align-items: flex-start;
       justify-content: center;
 
+      @include min-width(1025px) {
+        width: 70%;
+      }
+
       > img {
         width: 100%;
       }
 
       .h3 {
         font-weight: 700;
-        font-size: 32px;
+        font-size: 22px;
         line-height: 46px;
         color: $color-primary-1;
+
+        @include min-width(1025px) {
+          font-size: 32px;
+        }
       }
 
       p {
         margin-top: 1rem;
         font-weight: 350;
-        font-size: 20px;
+        line-height: 1.5em;
+        font-size: 1rem;
         color: $color-white;
+
+        @include min-width(1025px) {
+          font-size: 20px;
+        }
       }
     }
   }
 
   .s2-title-right {
-    width: 30%;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    @include min-width(768px) {
+      width: 50%;
+    }
+
+    @include min-width(1025px) {
+      width: 30%;
+      margin-top: 0;
+    }
 
     > img {
       width: 100%;
@@ -178,15 +215,21 @@ export default {
   z-index: 10;
 
   &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid $color-primary-1;
+    position: absolute;
+    top: 100px;
+
+    @include min-width(768px) {
+      height: 400px;
+    }
+
     @include min-width(1025px) {
-      content: '';
-      display: block;
-      width: 100%;
       height: 300px;
-      margin: 0 auto;
-      border: 1px solid $color-primary-1;
-      position: absolute;
-      top: 100px;
     }
 
     @include min-width(1440px) {
@@ -213,8 +256,12 @@ export default {
 }
 
 .arrow-btn-next3 {
-  right: 5%;
+  right: -3%;
   background-image: url('@/assets/images/newbtn/s4_arrow_default.svg');
+
+  @include min-width(768px) {
+    right: 5%;
+  }
 
   @include min-width(1280px) {
     right: 3%;
@@ -228,8 +275,13 @@ export default {
 }
 
 .arrow-btn-prev3 {
-  left: 5%;
+  left: -3%;
   background-image: url('@/assets/images/newbtn/s4_arrow_default.svg');
+
+  @include min-width(768px) {
+    left: 5%;
+  }
+
   @include min-width(1280px) {
     left: 3%;
   }
@@ -251,12 +303,21 @@ export default {
 //觀看完整課綱 按鈕
 .course-btn {
   position: absolute;
-  bottom: -35px;
+  bottom: 0px;
   left: 50%;
   z-index: 10;
   margin-left: -143.04px;
 
   @include min-width(768px) {
+    bottom: 0px;
+    margin-left: -178.8px;
+  }
+
+  @include min-width(960px) {
+    margin-left: -178.8px;
+  }
+
+  @include min-width(1025px) {
     bottom: -80px;
     margin-left: -178.8px;
   }

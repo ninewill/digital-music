@@ -143,6 +143,7 @@ export default {
       display: block;
       margin-right: 1rem;
       position: relative;
+      
 
       > a {
         width: 100%;

@@ -13,21 +13,19 @@
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
 
 .idx-banner-m {
   display: block;
   width: 100%;
   padding-bottom: 203.46%;
-  background: url("@/assets/images/pic/mobile/pic_00_banner.png");
+  background: url('@/assets/images/pic/mobile/pic_00_banner.png');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,7 +34,6 @@ export default {
     display: none;
   }
 }
-
 
 video {
   display: none;
@@ -67,11 +64,10 @@ video {
 }
 
 .sonic {
-  display: none;
+  width: 100%;
 
-  @include min-width(768px) {
+  @include min-width(1025px) {
     width: 60%;
-    display: block;
   }
 
   > img {
