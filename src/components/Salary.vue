@@ -21,6 +21,9 @@
         </div>
         <div class="salary-chart-bar">
           <Chart />
+          <div class="chart-m">
+            <img src="@/assets/images/mobile/s6_data.png" alt="圖片" />
+          </div>
           <ul class="salary-num">
             <li>$42,000~</li>
             <li>$35,000~</li>
@@ -363,9 +366,21 @@ margin-top: 5rem;
     width: 100%;
     margin-top: 2rem;
 
+    .chart-m{
+      display: block;
+
+      >img{
+        width: 100%;
+      }
+    }
+
     @include min-width(1025px) {
       margin-top: 0;
       width: 60%;
+
+      .chart-m{
+        display: none;
+      }
     }
 
     .salary-num {

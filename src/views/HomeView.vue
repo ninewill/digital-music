@@ -9,26 +9,26 @@
       <StartBlock />
     </section>
     <!--COURSE-->
-    <section class="section-block section2">
+    <section  class="section-block section2">
       <CourseBlock />
     </section>
     <!--COURSE Card slide-->
-    <div id="2" class="section-block section2-1">
+    <div  class="section-block section2-1">
       <CourseBlock2 />
     </div>
     <!--Training Center-->
-    <section class="section-block section3">
+    <section  class="section-block section3">
       <TrainingCenter />
     </section>
     <div class="tc-bar">
       <TrainingCenterBar />
     </div>
     <!--SALARY-->
-    <section class="section-block section4">
+    <section id="2" class="section-block section4">
       <Salary />
     </section>
     <!--BEST CHOICE-->
-    <section class="section-block section5">
+    <section id="3" class="section-block section5">
       <BestChoice />
     </section>
     <!--BONUS Bar-->
@@ -40,7 +40,7 @@
     <!-- BEST COURSE WAVE -->
     <div class="wave"></div>
     <!--BEST COURSE-->
-    <div id="3" class="section-block course-block">
+    <div id="4" class="section-block course-block">
       <BestCourse />
     </div>
     <!--Reply-->

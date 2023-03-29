@@ -75,17 +75,17 @@
 <script>
 export default {
   mounted() {
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper('.mySwiper', {
       spaceBetween: 10,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
     });
-    var swiper2 = new Swiper(".mySwiper2", {
+    var swiper2 = new Swiper('.mySwiper2', {
       spaceBetween: 10,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
       thumbs: {
         swiper: swiper,
@@ -96,10 +96,10 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-@import "@/assets/scss/swiper.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/swiper.scss';
 
 .swiper-wrapper {
   justify-content: space-between;
@@ -322,6 +322,10 @@ export default {
   @include min-width(1025px) {
     height: 300px;
   }
+
+  @include min-width(1440px) {
+    height: 350px;
+  }
 }
 
 .mySwiper2 {
@@ -342,7 +346,7 @@ export default {
   }
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     bottom: 0;

@@ -3,7 +3,7 @@
     <div class="s-content s4-content">
       <FormSingle />
     </div>
-    <a href="#4" class="btn-course">
+    <a href="#8" class="btn-course">
       <img
         class="btn-def"
         src="@/assets/images/newbtn/s0_coures_default.png"

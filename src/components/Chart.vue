@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="chart-pc">
     <canvas id="salaryBar"></canvas>
   </div>
 </template>
@@ -80,6 +80,14 @@ export default {
 @import "@/assets/scss/mixin.scss";
 @import "@/assets/scss/variables.scss";
 @import "@/assets/scss/reset.scss";
+
+.chart-pc{
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+  }
+}
 
 #salaryBar {
   width: 100%;

@@ -6,24 +6,33 @@
         <div class="swiper-bg"></div>
         <div class="cd-popup-container-left-bottom">
           <div class="swiper popup-swiper-form">
-            <div class="swiper-tag">
-              <img src="@/assets/images/newpic/s8_title01.svg" alt="圖片" />
-            </div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
+                <div class="swiper-tag">
+                  <img src="@/assets/images/newpic/s8_title01.svg" alt="圖片" />
+                </div>
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon01.svg" alt="圖片" />
                 </div>
+                <p class="swiper-form-txt">贈送Mixcraft 原廠官方素材</p>
               </div>
               <div class="swiper-slide">
+                <div class="swiper-tag">
+                  <img src="@/assets/images/newpic/s8_title02.svg" alt="圖片" />
+                </div>
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon02.svg" alt="圖片" />
                 </div>
+                <p class="swiper-form-txt">免費全方位 設計線上課程</p>
               </div>
               <div class="swiper-slide">
+                <div class="swiper-tag">
+                  <img src="@/assets/images/newpic/s8_title02.svg" alt="圖片" />
+                </div>
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon03.svg" alt="圖片" />
                 </div>
+                <p class="swiper-form-txt">免費實體 講堂體驗課</p>
               </div>
             </div>
             <div class="swiper-border swiper-border-l"></div>
@@ -35,7 +44,7 @@
         </div>
       </div>
       <!--表單-->
-      <div id="4" class="cd-popup-container-right">
+      <div id="8" class="cd-popup-container-right">
         <div class="cd-popup-container-right-top">
           <div class="top-img">
             <div class="h3">領取免費課程卷</div>
@@ -51,7 +60,7 @@
               <!--副類別-->
               <input name="outletSub" type="text" hidden value="213" />
               <!--媒體版位-->
-              <input name="mediaSub" type="text" hidden value="823" />
+              <input name="mediaSub" type="text" hidden value="855" />
               <input name="type" type="text" hidden value="Event" />
               <input name="course" type="text" hidden value="音樂製作課程" />
               <input name="gift" type="text" hidden value="線上課程+實體講堂" />
@@ -161,7 +170,7 @@
                   <textarea
                     id="message_area"
                     class="fieldset-input"
-                    placeholder="想詢問音樂相關問題..."
+                    placeholder="想詢問成音相關問題..."
                     name="message_area"
                     tabindex="10"
                   ></textarea>
@@ -490,23 +499,21 @@ distributionSubmitHandler(function(response){
     }
 
     &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      right: 0;
-      top: -70px;
-      width: 150px;
-      height: 131px;
-      background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
-      background-size: contain;
 
-      @include min-width(768px) {
-        width: 220px;
-        height: 192px;
-        top: -50px;
-      }
 
       @include min-width(1025px) {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
+        background-size: contain;
+        width: 200px;
+        height: 175px;
+        right: 0;
+        top: -80px;
+      }
+
+      @include min-width(1440px) {
         width: 241px;
         height: 211px;
         right: 0;
@@ -696,12 +703,12 @@ distributionSubmitHandler(function(response){
   }
 
   @include min-width(1440px) {
-    margin-top: 7rem;
+    margin-top: 3rem;
     padding: 8rem;
   }
 
   @include min-width(1920px) {
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 }
 
@@ -728,12 +735,11 @@ distributionSubmitHandler(function(response){
   display: block;
   font-size: 12px;
   line-height: 16.8px;
-  color: $color-white;
+  color: $color-primary-1;
   text-align: center;
 
   @include min-width(768px) {
     padding: 0 4rem;
-    text-align: left;
   }
 
   @include min-width(1440px) {
@@ -761,23 +767,55 @@ distributionSubmitHandler(function(response){
   @include min-width(484px) {
     width: 25%;
     margin-left: -12%;
+    top: 0;
   }
 
   @include min-width(768px) {
-    width: 30%;
-    margin-left: -15%;
+    width: 25%;
+    margin-left: -12%;
+    top: -40px;
+  }
+
+  @include min-width(960px) {
+    width: 22%;
+    margin-left: -11%;
   }
 
   @include min-width(1025px) {
     width: 25%;
-    margin-top: 4.5rem;
-    margin-left: -64.28px;
+    margin-top: 3rem;
+    margin-left: -48px;
+  }
+
+  @include min-width(1280px) {
+    width: 25%;
+    margin-top: 3rem;
+    margin-left: -50px;
   }
 
   @include min-width(1440px) {
-    width: auto;
-    margin-top: 4rem;
-    margin-left: -80px;
+    width: 30%;
+    margin-top: 3rem;
+    margin-left: -50px;
+  }
+
+  @include min-width(1650px) {
+    width: 35%;
+    margin-left: -60px;
+  }
+
+  @include min-width(1920px) {
+    width: 30%;
+    margin-left: -65px;
+  }
+}
+
+.swiper-form-txt {
+  color: $color-white;
+  font-size: 0.9rem;
+
+  @include min-width(1025px) {
+    font-size: 1rem;
   }
 }
 
@@ -854,25 +892,34 @@ distributionSubmitHandler(function(response){
 }
 
 .main-banner {
-  width: 40%;
+  width: 33%;
+  margin-top: 1rem;
 
   @include min-width(484px) {
-    width: 30%;
+    width: 20%;
+    margin-top: 20px;
   }
   @include min-width(768px) {
-    width: 28%;
+    width: 25%;
+    margin-top: 1rem;
   }
 
   @include min-width(1024px) {
-    width: 40%;
+    width: 25%;
+    margin-top: 1rem;
+  }
+
+  @include min-width(1280px) {
+    width: 30%;
   }
 
   @include min-width(1440px) {
-    width: 50%;
+    width: 35%;
   }
 
   @include min-width(1920px) {
-    width: 40%;
+    width: 28%;
+    margin-top: 1rem;
   }
 
   > img {
