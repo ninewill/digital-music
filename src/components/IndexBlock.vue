@@ -83,7 +83,7 @@ video {
 .sonic-nav {
   position: fixed;
   top: 120px;
-  left: 5%;
+  left: 2%;
   z-index: 100;
 
   @include min-width(484px) {
@@ -130,11 +130,20 @@ video {
       > a {
         display: block;
         color: $color-white;
-        font-size: 1rem;
+        font-size: 14px;
         writing-mode: vertical-lr;
+        transition: 0.2s;
+
+        &.active{
+          color: $color-primary-1;
+        }
 
         @include min-width(1025px) {
           font-size: 1rem;
+          
+          &:hover{
+            color: $color-primary-1;
+          }
         }
 
         @include min-width(1280px) {

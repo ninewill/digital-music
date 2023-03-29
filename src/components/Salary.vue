@@ -24,16 +24,6 @@
           <div class="chart-m">
             <img src="@/assets/images/mobile/s6_data.png" alt="圖片" />
           </div>
-          <ul class="salary-num">
-            <li>$42,000~</li>
-            <li>$35,000~</li>
-            <li>$35,000~</li>
-            <li>$35,000~</li>
-            <li>$30,000~</li>
-            <li>$10,000~</li>
-            <li>$5,000~</li>
-            <li>$3,000~</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -380,54 +370,6 @@ margin-top: 5rem;
 
       .chart-m{
         display: none;
-      }
-    }
-
-    .salary-num {
-      display: none;
-
-      @include min-width(1280px) {
-        margin-top: 1rem;
-        position: absolute;
-        top: 0;
-        right: -50px;
-      }
-
-      @include min-width(1440px) {
-        display: block;
-        right: -70px;
-      }
-
-      @include min-width(1650px) {
-        right: -80px;
-      }
-
-      @include min-width(1920px) {
-        right: -150px;
-      }
-
-      > li {
-        margin-top: 1.3rem;
-        color: $color-primary-1;
-        font-size: 0.9vw;
-
-        &:first-child {
-          margin-top: 0;
-        }
-
-        @include min-width(1025px) {
-          font-size: 1.2vw;
-        }
-
-        @include min-width(1440px) {
-          margin-top: 1rem;
-          font-size: 1.1rem;
-        }
-
-        @include min-width(1920px) {
-          margin-top: 1.3rem;
-          font-size: 0.9vw;
-        }
       }
     }
   }

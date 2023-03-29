@@ -14,7 +14,7 @@
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon01.svg" alt="圖片" />
                 </div>
-                <p class="swiper-form-txt">贈送Mixcraft 原廠官方素材</p>
+                <p class="swiper-form-txt">贈送Mixcraft<br>原廠官方素材</p>
               </div>
               <div class="swiper-slide">
                 <div class="swiper-tag">
@@ -23,7 +23,7 @@
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon02.svg" alt="圖片" />
                 </div>
-                <p class="swiper-form-txt">免費全方位 設計線上課程</p>
+                <p class="swiper-form-txt">免費全方位<br>設計線上課程</p>
               </div>
               <div class="swiper-slide">
                 <div class="swiper-tag">
@@ -32,7 +32,7 @@
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon03.svg" alt="圖片" />
                 </div>
-                <p class="swiper-form-txt">免費實體 講堂體驗課</p>
+                <p class="swiper-form-txt">免費實體<br>講堂體驗課</p>
               </div>
             </div>
             <div class="swiper-border swiper-border-l"></div>

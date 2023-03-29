@@ -195,6 +195,10 @@ export default {
 .mySwiper-part1 {
   overflow: hidden;
 
+  @include min-width(1025px) {
+    height: 300px;
+  }
+
   img {
     width: 100% !important;
     height: auto;

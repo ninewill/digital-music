@@ -20,6 +20,7 @@ export default {
     $(".cd-popup-trigger0").on("click", function (event) {
       event.preventDefault();
       $(".cd-popup0").addClass("is-visible");
+      $('html, body').addClass("over-hidden");
 			console.log("click");
     });
 
@@ -31,6 +32,7 @@ export default {
       ) {
         event.preventDefault();
         $(this).removeClass("is-visible");
+        $('html, body').removeClass("over-hidden");
       }
     });
   },
