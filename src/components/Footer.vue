@@ -12,6 +12,8 @@
           >
         </div>
         <div class="footer-contact"></div>
+      </div>
+      <div class="footer-right">
         <ul class="footer-media">
           <li class="footer-media-icon fb">
             <a href="https://www.facebook.com/appedu/" target="_blank"
@@ -38,8 +40,6 @@
             >
           </li>
         </ul>
-      </div>
-      <div class="footer-right">
         <div class="footer-copyright">
           <span>Copyright ©Appedu. All rights reserved.</span>
           <span
@@ -56,10 +56,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
 
 // * ==========================================================================
 // * FOOTER 區塊
@@ -71,15 +70,15 @@ export default {};
   padding: 18px 20px;
   position: relative;
 
-  &::after{
-    content: "";
+  &::after {
+    content: '';
     position: absolute;
     top: -150px;
     left: 0;
     display: block;
     width: 100%;
     height: 206px;
-    background: url("@/assets/images/newpic/footer_wave.png") no-repeat;
+    background: url('@/assets/images/newpic/footer_wave.png') no-repeat;
     background-size: contain;
     background-position: 50% 50%;
   }
@@ -121,8 +120,8 @@ export default {};
 
   @include min-width(1025px) {
     display: flex;
-    align-items: center;
-    width: 60%;
+    justify-content: space-between;
+    width: 65%;
   }
 }
 
@@ -131,7 +130,7 @@ export default {};
   margin: 0 auto;
 
   @include min-width(1025px) {
-    width: 40%;
+    width: 35%;
   }
 }
 
@@ -162,7 +161,7 @@ export default {};
     height: 100%;
     display: block;
     color: $color-white;
-    background: url("@/assets/images/icon/Logo_Normal.svg") no-repeat
+    background: url('@/assets/images/icon/Logo_Normal.svg') no-repeat
       center/contain;
     @include hidetext;
     transition: 0.2s;
@@ -170,24 +169,21 @@ export default {};
 }
 
 .footer-contact {
-  width: 210px;
-  height: 34px;
+  width: 268px;
+  height: 80px;
   margin: 0 auto;
   margin-top: 35px;
-  background: url("@/assets/images/icon/Tel.svg") no-repeat center/contain;
+  background: url('@/assets/images/newpic/footer_phone.svg') no-repeat
+    center/contain;
 
   @include min-width(1025px) {
     margin-top: 0;
     margin-left: 0;
-    margin-right: 1rem;
+    margin-right: 12%;
   }
 
-  @include min-width(1440px) {
-    margin-right: 2rem;
-  }
-
-  @include min-width(1920px) {
-    margin-right: 3.5rem;
+  @include min-width(1280px) {
+    margin-right: 25%;
   }
 }
 
@@ -199,7 +195,7 @@ export default {};
 
   @include min-width(1025px) {
     margin-top: 0;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .footer-media-icon {
@@ -224,16 +220,16 @@ export default {};
 }
 
 .fb {
-  background: url("@/assets/images/icon/Facebook_Normal.svg");
+  background: url('@/assets/images/icon/Facebook_Normal.svg');
 }
 .line {
-  background: url("@/assets/images/icon/Line_Normal.svg");
+  background: url('@/assets/images/icon/Line_Normal.svg');
 }
 .yt {
-  background: url("@/assets/images/icon/Youtube_Normal.svg");
+  background: url('@/assets/images/icon/Youtube_Normal.svg');
 }
 .ig {
-  background: url("@/assets/images/icon/Instagram_Normal.svg");
+  background: url('@/assets/images/icon/Instagram_Normal.svg');
 }
 
 .footer-copyright {
@@ -241,7 +237,6 @@ export default {};
 
   @include min-width(1025px) {
     margin-top: 0;
-    margin-left: 4rem;
   }
 
   > span {
