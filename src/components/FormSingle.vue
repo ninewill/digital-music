@@ -14,7 +14,7 @@
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon01.svg" alt="圖片" />
                 </div>
-                <p class="swiper-form-txt">贈送Mixcraft<br>原廠官方素材</p>
+                <p class="swiper-form-txt">贈送Mixcraft<br />原廠官方素材</p>
               </div>
               <div class="swiper-slide">
                 <div class="swiper-tag">
@@ -23,7 +23,7 @@
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon02.svg" alt="圖片" />
                 </div>
-                <p class="swiper-form-txt">免費全方位<br>設計線上課程</p>
+                <p class="swiper-form-txt">免費全方位<br />設計線上課程</p>
               </div>
               <div class="swiper-slide">
                 <div class="swiper-tag">
@@ -32,7 +32,7 @@
                 <div class="main-banner">
                   <img src="@/assets/images/newpic/s8_icon03.svg" alt="圖片" />
                 </div>
-                <p class="swiper-form-txt">免費實體<br>講堂體驗課</p>
+                <p class="swiper-form-txt">免費實體<br />講堂體驗課</p>
               </div>
             </div>
             <div class="swiper-border swiper-border-l"></div>
@@ -491,22 +491,25 @@ distributionSubmitHandler(function(response){
     background-size: contain;
     background-position: 0 100%;
 
-    @include min-width(768px) {
-      width: 50%;
-      margin-top: -22%;
-      margin-left: 25%;
-      padding-bottom: 17.34%;
-    }
-
     &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
+      background-size: contain;
+      width: 120px;
+      height: 105px;
+      right: 0;
+      top: -50px;
 
+      @include min-width(768px) {
+        width: 150px;
+        height: 131px;
+        right: 0;
+        top: -20px;
+      }
 
       @include min-width(1025px) {
-        content: '';
-        display: block;
-        position: absolute;
-        background: url('@/assets/images/newpic/s8_girl.png') no-repeat;
-        background-size: contain;
         width: 200px;
         height: 175px;
         right: 0;
@@ -521,6 +524,47 @@ distributionSubmitHandler(function(response){
       }
     }
 
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 10px;
+      top: -130px;
+      width: 103px;
+      height: 112px;
+      z-index: 0;
+      background: url('@/assets/images/newpic/s8_bg_deco.png') no-repeat;
+      background-size: contain;
+
+      @include min-width(768px) {
+        left: 0px;
+        top: -150px;
+        width: 153px;
+        height: 162px;
+      }
+
+      @include min-width(1025px) {
+        left: -100px;
+        top: -200px;
+        width: 203px;
+        height: 212px;
+      }
+
+      @include min-width(1440px) {
+        left: -100px;
+        top: -200px;
+        width: 203px;
+        height: 212px;
+      }
+    }
+
+    @include min-width(768px) {
+      width: 50%;
+      margin-top: -22%;
+      margin-left: 25%;
+      padding-bottom: 17.34%;
+    }
+
     @include min-width(1025px) {
       position: absolute;
       top: 0;
@@ -532,19 +576,6 @@ distributionSubmitHandler(function(response){
       background-size: contain;
       background-position: 0 100%;
       z-index: 10;
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: -100px;
-        top: -200px;
-        width: 203px;
-        height: 212px;
-        z-index: 0;
-        background: url('@/assets/images/newpic/s8_bg_deco.png') no-repeat;
-        background-size: contain;
-      }
     }
 
     @include min-width(1280px) {

@@ -268,7 +268,7 @@ export default {
   }
 
   @include min-width(1280px) {
-    right: 3%;
+    right: -3%;
   }
   @include min-width(1440px) {
     right: 3%;
@@ -287,7 +287,7 @@ export default {
   }
 
   @include min-width(1280px) {
-    left: 3%;
+    left: -3%;
   }
   @include min-width(1440px) {
     left: 3%;

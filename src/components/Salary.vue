@@ -60,17 +60,23 @@ export default {
   }
 
   &:before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: url('@/assets/images/newpic/s6_bg_deco.png') no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    z-index: 10;
+
     @include min-width(1280px) {
-      content: '';
-      position: absolute;
       top: -120px;
       left: -280px;
       width: 192px;
       height: 192px;
-      display: block;
-      background: url('@/assets/images/newpic/s6_bg_deco.png') no-repeat;
-      background-size: contain;
-      background-position: 50% 50%;
     }
   }
 
@@ -189,7 +195,7 @@ export default {
     padding: 0 5rem;
 
     @include min-width(768px) {
-margin-top: 5rem;
+      margin-top: 5rem;
     }
 
     @include min-width(1025px) {
@@ -356,10 +362,10 @@ margin-top: 5rem;
     width: 100%;
     margin-top: 2rem;
 
-    .chart-m{
+    .chart-m {
       display: block;
 
-      >img{
+      > img {
         width: 100%;
       }
     }
@@ -368,7 +374,7 @@ margin-top: 5rem;
       margin-top: 0;
       width: 60%;
 
-      .chart-m{
+      .chart-m {
         display: none;
       }
     }
